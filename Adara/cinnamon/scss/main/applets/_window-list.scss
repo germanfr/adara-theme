@@ -1,0 +1,61 @@
+/* ======================================
+ * ! Window list
+ * ====================================== */
+
+.window-list-box {
+	spacing: $padding-xxs;
+	padding: 0 $padding-xxs;
+
+	&.vertical { padding: $padding-xxs 0; }
+}
+
+.window-list-item-box {
+	color: $text-primary-invert;
+	spacing: $applet-padding * 2 / 3;
+	border-color: transparent;
+	padding: 1px $applet-padding;
+
+	.vertical & { padding: 4px 1px; }
+
+	@each $pos in top, bottom, left, right {
+		&.#{$pos} {
+			border-#{$pos}-width: 1px;
+			padding-#{$pos}: 0px;
+		}
+	}
+
+	&:hover, &:active, &:checked, &:focus {
+		border-color: $text-primary-invert;
+		color: $text-primary-invert;
+	}
+
+	&:active, &:checked, &:focus  {
+		background-color: rgba($text-primary-invert, .1);
+	}
+
+	.progress {
+		background-color: rgba($accent-success, .5);
+	}
+}
+
+.window-list-item-demands-attention,
+.window-list-item-demands-attention:hover {
+	background-color: rgba($accent-hlight, .1);
+	border-color: $accent-hlight;
+}
+
+/*
+ * [DEPRECATED]
+ * The window list thumbnail shares a class
+ * with the alt-tab switcher, but it is
+ * the direct child of the top container.
+ *
+ * Hopefully a 'switcher-list' doesn't appear
+ * anywhere else as the direct child of '#uiGroup'.
+ */
+#uiGroup > .switcher-list,
+.window-list-preview {
+	@include background-element;
+	padding: $padding-s;
+	spacing: $padding-s;
+}

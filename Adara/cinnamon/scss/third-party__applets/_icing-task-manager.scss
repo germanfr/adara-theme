@@ -1,0 +1,46 @@
+.menu .switcher-list {
+	padding: 0;
+}
+
+.thumbnail-box {
+	padding: 0;
+
+	&:hover {
+		@include hover;
+	}
+
+	.window-close {
+		background-image: url("img/controls/close-simple.svg");
+		background-size: 16px;
+		@include size(16px);
+		margin-top: $padding-xxs;
+
+		&:hover {
+			background-image: url("img/controls/close-simple-hover.svg");
+		}
+	}
+
+	.thumbnail {
+		margin: $padding-xs $padding-xxs;
+		&-label, &-label-no-icon {
+			color: $text-primary;
+			font-weight: normal;
+			padding: $padding-xxs 0 0 $padding-xxs;
+		}
+
+		&-icon {
+			@include size(16px);
+			padding: $padding-xxs;
+			padding-bottom: 0;
+		}
+	}
+}
+
+/* NumLabel */
+.window-icon-list-numlabel {
+	color: rgba($text-primary-invert, 1);
+	text-shadow: 1px 1px 1px rgba(#000, .5);
+	padding: $padding-xxs;
+	font-size: 100%;
+	font-weight: bold;
+}

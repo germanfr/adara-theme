@@ -1,0 +1,98 @@
+/* ======================================
+ * ! G-tile
+ * ====================================== */
+
+.grid-panel {
+	@include background-element;
+	width: 220px; // fixed
+	spacing: 0;
+	font-size: $font-size-base;
+}
+
+.grid-title {
+	font-size: 100%;
+	font-weight: normal;
+	color: $text-primary;
+	text-align: center;
+}
+
+.table {
+	padding: 0 ($padding-s - 2px);
+
+	&-element {
+		margin: 2px;
+		@include background-element(accent);
+
+		&:hover, &:activate {
+			@include background-element(secondary);
+		}
+	}
+}
+
+
+.top-box {
+	padding: $padding-xs $padding-s;
+}
+
+.bottom-box {
+	padding: $padding-s;
+
+	&:last-child {
+		border-top: 1px $border-secondary;
+		background-color: $background-secondary;
+	}
+}
+
+.settings-label {}
+.grid-preview:activate {
+	@include selection;
+}
+
+.close-button {
+	background-image: url("img/controls/close-simple.svg");
+
+	&:hover { background-image: url("img/controls/close-simple-hover.svg"); }
+}
+
+/* buttons */
+.settings-button {
+	&, &:hover, &:activate, &:activate:hover {
+		@include size(24px);
+		min-width: 48px;
+		border: 0;
+	}
+
+	/* Add this to give more priority over border:0 in :activate:hover */
+	.bottom-box & {
+		@include btn-linked-primary;
+	}
+}
+
+/* button-icons */
+.tiling-icon {
+	@include size(16px);
+}
+
+.animation-icon {
+	background-image: url("img/misc/animation.svg");
+	@include size(16px);
+}
+
+.auto-close-icon {
+	background-image: url("img/controls/close-simple-hover.svg");
+	@include size(16px);
+}
+
+.action-main-list {
+	background-image: url("img/misc/auto-tile-1.svg");
+	@include size(16px);
+}
+
+.action-two-list {
+	background-image: url("img/misc/auto-tile-2.svg");
+	@include size(16px);
+}
+
+.action-scale {
+	@include size(16px);
+}

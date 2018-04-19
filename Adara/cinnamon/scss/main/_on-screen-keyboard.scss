@@ -1,0 +1,27 @@
+/* ======================================
+ * ! On-screen Keyboard
+ * ====================================== */
+
+#keyboard {
+	@include background-element(secondary);
+	border-radius: 0;
+}
+
+.keyboard-layout {
+	spacing: .45em; // Space between rows
+	padding: 8px;
+}
+
+.keyboard-row {
+	spacing: .45em; // Horizontal space between keys
+}
+
+.keyboard-key {
+	@include btn-primary;
+	font-size: $font-size-xl;
+}
+
+/* Appears when long-pressing certain keys */
+.keyboard-subkeys {
+	@include background-element;
+}

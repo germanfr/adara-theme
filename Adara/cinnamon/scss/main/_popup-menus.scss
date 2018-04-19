@@ -1,0 +1,94 @@
+/* ======================================
+ * ! Popup Menus
+ * ====================================== */
+
+.menu {
+	@include background-element;
+	margin: $padding-s;
+}
+
+.popup-menu-content {
+	color: $text-primary;
+	padding: $padding-xxs 0;
+	min-width: 8em;
+	font-size: $font-size-base;
+}
+
+.popup-menu-icon {
+	icon-size: 16px;
+	color: $text-secondary;
+}
+
+.popup-menu-arrow {
+	icon-size: 1em;
+	@include size(1em);
+	color: $text-primary;
+}
+
+.popup-menu-item {
+	padding: $padding-xs $padding-m;
+	spacing: $padding-s;
+
+	&:active {
+		@include hover($radius:false);
+	}
+
+	&:insensitive {
+		font-weight: normal;
+		color: $text-disabled;
+
+		.popup-menu-icon, StIcon {
+			color: $text-disabled;
+		}
+	}
+}
+
+.popup-menu-item-dot {
+	color: $accent-primary;
+}
+
+.popup-sub-menu {
+	@include background-element(secondary);
+	border-right-width: 0;
+	border-left-width: 0;
+	padding: $padding-xxs 0;
+}
+
+.popup-separator-menu-item {
+	-gradient-height: 1px;
+	-gradient-start: $border-primary;
+	-gradient-end: $border-primary;
+	-margin-horizontal: 0;
+	height: 1px;
+	padding: 0;
+}
+
+.popup-slider-menu-item {
+	@extend .slider;
+}
+
+/* Right click in scale (show all windows) */
+.popup-combo-menu {
+	@include background-element;
+
+	.popup-menu-item:active {
+		@include hover($radius:false);
+	}
+}
+
+.popup-inactive-menu-item {
+	color: $text-disabled;
+}
+
+.popup-subtitle-menu-item {
+	font-weight: bold;
+}
+
+/* used in power applet */
+.popup-device-menu-item {
+	spacing: $padding-s;
+
+	.popup-inactive-menu-item {
+		color: $text-info;
+	}
+}

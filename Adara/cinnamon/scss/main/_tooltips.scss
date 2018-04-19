@@ -1,0 +1,12 @@
+/* ======================================
+ * ! Tooltips
+ * ====================================== */
+
+#Tooltip {
+	@include background-element(accent);
+	padding: ($padding-s / 2) $padding-s;
+	font-size: $font-size-base;
+	font-weight: normal;
+	text-align: center;
+	spacing: $padding-xs;
+}

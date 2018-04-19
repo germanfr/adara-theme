@@ -1,0 +1,49 @@
+/* ======================================
+ * ! OSD
+ * ====================================== */
+
+/* Appears when adding panels or snapping windows */
+.info-osd {
+	@include background-element;
+	spacing: 0;
+	padding: $padding-s $padding-m;
+	text-align: center;
+	font-weight: normal;
+	font-size: $font-size-xl;
+}
+
+/* Appears when switching workspaces */
+.workspace-osd {
+	@extend .info-osd;
+	font-size: $font-size-xxl;
+}
+
+/* Appears when selecting with looking glass*/
+#LookingGlassDialog {
+	@include background-element;
+	padding: $padding-s $padding-m;
+	spacing: $padding-xs;
+	font-size: $font-size-base;
+	text-align: center;
+	font-weight: normal;
+}
+
+/* Volume, brightness, ect. */
+.osd-window {
+	@include background-element;
+	padding: $padding-s;
+	spacing: 0;
+
+	.level {
+		background-color: $border-primary;
+		border: 0;
+		border-radius: 6px;
+		height: 6px;
+		color: $text-primary;
+	}
+
+	.level-bar {
+		border-radius: 6px;
+		background-color: $accent-primary;
+	}
+}

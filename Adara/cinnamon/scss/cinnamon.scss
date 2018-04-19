@@ -1,0 +1,46 @@
+/*
+ * Adara theme for Cinnamon
+ * Copyright (C) 2018 Germán Franco <dev.germanfr@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+// Base
+@import "base/sizes";
+@import "base/options";
+@import "base/utils";
+@import "base/colors";
+@import "base/font";
+
+// Main
+@import "main/tooltips";
+@import "main/tile-previews";
+@import "main/controls/0-INDEX";
+@import "main/popup-menus";
+@import "main/panel";
+@import "main/expo-&-scale";
+@import "main/applets/0-INDEX";
+@import "main/desklets/0-INDEX";
+@import "main/modal-dialogs";
+@import "main/notifications";
+@import "main/alt-tab";
+@import "main/on-screen-keyboard";
+@import "main/hot-corners";
+@import "main/OSD";
+@import "main/magnifier";
+
+// Third-party
+@import "third-party__applets/0-INDEX";
+@import "third-party__desklets/0-INDEX";
+@import "third-party__extensions/0-INDEX";

@@ -1,0 +1,15 @@
+/* ======================================
+ * ! Tile Previews
+ * ====================================== */
+
+@mixin selection($color:$accent-info) {
+	$color: darken($color, 10%);
+	border: 1px rgba($color, 1);
+	background-color: rgba($color, .6);
+}
+
+.tile-preview, .tile-hud {
+	@include selection;
+
+	&.snap { @include selection($accent-success); }
+}

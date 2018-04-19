@@ -1,0 +1,54 @@
+/* ======================================
+ * ! Sound Applet
+ * ====================================== */
+
+.sound-player {
+	padding: 0;
+
+	> StBoxLayout:first-child {
+		padding: $padding-xs;
+		spacing: $padding-xs;
+		font-weight: normal;
+		font-size: $font-size-lg;
+		margin: 0 $padding-xxs $padding-xxs; // Compensate popupmenu extra top padding
+
+		StButton {
+			@include btn-primary;
+			@include btn-size(small);
+		}
+	}
+
+	/* sometimes disappears (in all themes) */
+	&-generic-coverart {
+		background-color: $background-secondary;
+		border-top: 1px $border-secondary;
+	}
+
+	&-overlay {
+		border-top: 1px $border-primary;
+		background-color: $background-primary;
+		padding: $padding-m $padding-l;
+		spacing: $padding-s;
+		color: $text-primary;
+
+		StBoxLayout {
+			spacing: $padding-xs;
+			/* Cover width is hardcoded to 300px */
+			max-width: 300px - 2 * $padding-l - 2;
+		}
+
+		StButton {
+			@include btn-primary;
+			@include btn-size(medium);
+		}
+	}
+
+	.slider {
+		height: .45em;
+		-slider-background-color: #cccccc;
+		-slider-active-background-color: $accent-primary;
+		-slider-handle-radius: 0;
+		border-image: none;
+		border: 0 transparent;
+	}
+}

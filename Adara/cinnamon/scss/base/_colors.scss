@@ -1,0 +1,30 @@
+// Accent colors
+$accent-primary: #444; //darken(#3399ff, 7.5%);
+$accent-success: #33cc33;
+$accent-info:    #3399cc;
+$accent-hlight:  #ffcc00;
+$accent-danger:  #ff3333;
+
+// Text color
+$text-primary:   rgba(#000, .7);
+$text-secondary: rgba(#000, .6);
+$text-disabled:  rgba(#000, .25);
+
+$text-primary-invert:   rgba(#fff, .85);
+$text-secondary-invert: rgba(#fff, .6);
+$text-disabled-invert:  rgba(#fff, .25);
+
+$text-link:    saturate(darken($accent-info,    10%), 20%);
+$text-success: saturate(darken($accent-success, 18%),  6%);
+$text-info:    saturate(darken($accent-info,    10%), 20%);
+$text-hlight:  saturate(darken($accent-hlight,   4%), 20%);
+$text-danger:  saturate(darken($accent-danger,   6%), 99%);
+
+$background-primary:   #fafafa;
+$background-secondary: #f0f0f0;
+$background-accent:    #ffffff;
+$background-hover:     rgba(#000, .15);
+$background-panel:     rgba(#000, .8);
+
+$border-primary:   rgba(#000, .2);
+$border-secondary: rgba(#000, .15);

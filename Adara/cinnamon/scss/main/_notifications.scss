@@ -1,0 +1,82 @@
+/* ======================================
+ * ! Notifications
+ * ====================================== */
+
+.url-highlighter { link-color: $text-link; }
+
+#notification {
+	@include background-element;
+	padding: $padding-m;
+	spacing-rows: $padding-xs;
+	spacing-columns: $padding-m;
+	width: 32em;
+	margin-from-right-edge-of-screen: 10px; /* Same as top (hardcoded) */
+	font-size: $font-size-base;
+	color: $text-secondary;
+
+	CinnamonGenericContainer * {
+		font-weight: normal;
+		font-size: $font-size-base;
+
+		/* Notification title */
+		&:first-child {
+			font-size: $font-size-base;
+			color: $text-primary;
+		}
+	}
+
+	&-body {
+		font-weight: normal;
+		font-size: $font-size-base;
+	}
+
+	&-actions {
+		spacing: $padding-xs;
+	}
+
+	/* We use row-span = 2 for the image cell, which prevents its height preferences to be
+	taken into account during allocation, so its height ends up being limited by the height
+	of the content in the other rows. To avoid showing a stretched image, we set the minimum
+	height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
+	&.notification-with-image {
+		min-height: 24 + 125 + $padding-xs;
+
+		.popup-menu-content & {
+			// min-height: 180px;
+		}
+
+		#notification-body {
+			padding: 0;
+		}
+	}
+}
+
+.notification-button {
+	@include btn-primary;
+	@include btn-size(wide);
+}
+
+.notification-icon-button {
+	@include btn-primary;
+	@include btn-size(medium);
+}
+
+
+/* ======================================
+ * ! Notification applet
+ * ====================================== */
+
+#traycontainer {
+	max-height: 32em; // should be fixed by cinnamon
+
+	&:ltr { padding-right: $padding-s; }
+	&:rtl { padding-left: $padding-s; }
+
+	.notification-applet-padding { padding: ($padding-s / 2) $padding-s; }
+
+	#notification {
+		box-shadow: 0 0 transparent;
+		background-color: $background-secondary;
+		font-size: 100%;
+	}
+}

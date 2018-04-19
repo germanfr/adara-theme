@@ -1,0 +1,87 @@
+/* ======================================
+ * ! App menu applet
+ * ====================================== */
+
+.menu-background.menu {
+	padding: $padding-s;
+}
+
+.menu-favorites-box {
+	@include background-element(secondary);
+	padding: $padding-xxs;
+}
+
+.menu-favorites-button {
+	/* Vertical padding hardcoded in the applet code,
+	 * vpadding = icon_size / 3, where icon_size = 32px */
+	padding: 11px;
+
+	&:hover {
+		@include hover;
+	}
+}
+
+.menu-categories-box {
+	padding: 0;
+}
+
+.menu-applications-outer-box {
+	spacing: $padding-s;
+
+	.menu-applications-inner-box {
+		padding: 0 $padding-s;
+	}
+
+	.menu-applications-scrollbox {
+		padding: 0;
+	}
+}
+
+.menu-application-button,
+.menu-category-button {
+	padding: $padding-xs;
+	spacing: $padding-s;
+
+	&-selected, &-selected:highlighted {
+		padding: $padding-xs;
+		spacing: $padding-s;
+		color: $text-primary;
+		@include hover;
+
+		StIcon { color: $text-primary; }
+	}
+
+	&-selected:highlighted, &:highlighted {
+		font-weight: bold;
+	}
+
+	&-greyed {
+		padding: $padding-xs;
+		spacing: $padding-s;
+		color: $text-disabled;
+	}
+}
+
+.menu-selected-app-box {
+	margin: $padding-s $padding-s $padding-xxs;
+	text-align: right;
+}
+
+.menu-selected-app-title {
+	color: $text-primary;
+}
+
+.menu-selected-app-description {
+	max-width: 12em;
+	color: $text-secondary;
+}
+
+.menu-search-box {
+	padding: 0 0 $padding-s;
+}
+
+/* The right click menu */
+.menu-applications-inner-box StScrollView {
+	@include background-element(secondary);
+	padding: $padding-xxs 0;
+}

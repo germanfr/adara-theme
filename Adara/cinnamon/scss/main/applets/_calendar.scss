@@ -1,0 +1,88 @@
+/* ======================================
+ * ! Calendar
+ * ====================================== */
+
+.datemenu-date-label {
+	padding: $padding-s;
+	padding-bottom: 0;
+	text-align: center;
+	color: $text-primary;
+	font-size: $font-size-lg;
+}
+
+.calendar {
+	padding: $padding-m;
+	padding-bottom: $padding-xs;
+	spacing-rows: 0;
+	spacing-columns: 0px;
+}
+
+/* [<] Month [>] [<] Year [>] */
+.calendar-month-label {
+	padding: $padding-xxs 0;
+	color: $text-primary;
+}
+
+.calendar-change-month-back,
+.calendar-change-month-forward {
+	@include background-element(accent);
+	@include size(20px);
+	background-size: 16px;
+	margin: 0 $padding-xxs;
+
+	&:hover {
+		@include background-element(secondary);
+	}
+}
+.calendar-change-month-back,
+.calendar-change-month-forward:rtl {
+	background-image: url("img/controls/calendar-arrow-left.svg");
+}
+.calendar-change-month-forward,
+.calendar-change-month-back:rtl {
+	background-image: url("img/controls/calendar-arrow-right.svg");
+}
+
+.calendar-day-heading {
+	color: $text-primary;
+	padding: $padding-m 0 $padding-xxs;
+	text-align: center;
+	font-weight: bold;
+}
+
+.calendar-day-base {/*!*/}
+
+.calendar-day {
+	border: 1px $border-primary;
+	border-top-width: 0;
+    border-left-width: 0;
+	@include size(2.4em);
+}
+.calendar-day-top {
+	border-top-width: 1px;
+}
+.calendar-day-left {
+	border-left-width: 1px;
+}
+
+.calendar-work-day {
+	color: $text-primary;
+}
+.calendar-nonwork-day {
+	color: $text-secondary;
+	background-color: $background-secondary;
+	border-color: $border-secondary;
+}
+
+.calendar-today {
+	background-color: rgba($accent-info, .25);
+	font-weight: bold;
+}
+
+.calendar-other-month-day {
+	color: $text-disabled;
+}
+
+.calendar-week-number {
+	color: $text-secondary;
+}

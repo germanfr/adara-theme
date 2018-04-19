@@ -1,0 +1,84 @@
+/* ======================================
+ * ! Calculator
+ * ====================================== */
+
+.calc-mainBox {
+	padding: $padding-xs;
+	spacing: $padding-xs;
+}
+
+.calc-displayArea {
+	padding: 0;
+}
+
+.calc-displayWindow {
+	&, &-rpn {
+		@include background-element(accent);
+		padding: $padding-xs;
+		padding-bottom: $padding-m;
+	}
+}
+
+.calc-displayText-primary {
+	font-size: $font-size-xxxl;
+	color: $text-primary;
+	text-align: right;
+}
+
+.calc-displayText-secondary {
+	font-size: $font-size-base;
+	color: $text-primary;
+	text-align: right;
+	padding-bottom: 8px;
+}
+
+.calc-displayText-operation {
+	color: $text-primary;
+}
+
+.calc-displayText-status {
+	font-size: $font-size-base;
+	color: $text-secondary;
+}
+
+.calc-displayText-rpn {
+	color: $text-primary;
+	font-size: $font-size-base;
+}
+
+.calc-stackArea {
+	height: 6em;
+}
+
+/* Go up/down arrows */
+.calc-navigation-box {
+	padding: 0 0 0 $padding-xs;
+	width: 16px;
+	border: none;
+}
+
+.calc-navigation-icon {
+	color: $text-secondary;
+	icon-size: 16px;
+}
+
+.calc-navigation-button {
+	border: none;
+
+	&:hover .calc-navigation-icon {
+		color: $text-primary;
+	}
+}
+
+.calc-button {
+	@include btn-primary;
+	margin: 0;
+
+	&-padding {
+		padding: 0;
+	}
+
+	StIcon {
+		color: $text-primary;
+	}
+}

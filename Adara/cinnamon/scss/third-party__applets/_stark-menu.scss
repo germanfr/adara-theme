@@ -1,0 +1,70 @@
+/* ======================================
+ * ! Stark menu applet
+ * ====================================== */
+
+.starkmenu-background {
+
+	.popup-menu-content {
+		padding: $padding-s;
+	}
+
+	.hover-box {
+		padding: 0 0 $padding-s;
+
+		.hover-icon {
+			padding: $padding-xs;
+			@include background-element(secondary);
+		}
+
+		.hover-user-icon {
+			@extend .hover-icon;
+		}
+
+		.starkmenu-user-label {
+			padding: 0 $padding-xs;
+		}
+	}
+
+	.menu-applications-outer-box {
+		spacing: 0;
+	}
+
+	.menu-favorites-box {
+		border: none;
+		background: none;
+		padding: 0;
+
+		.menu-favorites-button {
+			padding: $padding-xs;
+		}
+
+		.menu-context-menu {
+			@include background-element(secondary);
+		}
+
+		.popup-separator-menu-item {
+			padding: $padding-xs 0;
+			margin: 0;
+		}
+	}
+
+	.right-buttons-box {
+		padding: 0;
+		.popup-separator-menu-item {
+			padding: $padding-xs 0;
+		}
+
+		.starkhover-box .popup-menu-item {/*!*/}
+	}
+}
+
+.starkmenu-search-box {
+	padding-top: $padding-s;
+}
+
+@each $action in quit, logout, lockscreen {
+	.starkmenu-#{$action}-horizontal-button,
+	.starkmenu-#{$action}-horizontal-button-selected {
+		padding: 0;
+	}
+}

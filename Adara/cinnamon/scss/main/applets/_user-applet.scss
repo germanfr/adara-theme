@@ -1,0 +1,22 @@
+/* ======================================
+ * ! User Applet
+ * ====================================== */
+
+.user-box {
+	padding: $padding-s;
+	padding-bottom: $padding-xs;
+	spacing: $padding-xs;
+	margin: 0 $padding-xxs; // Compensate popupmenu extra top padding
+}
+
+.user-icon {
+	@include size(32px);
+	border: none;
+	background: transparent;
+}
+
+.user-label {
+	color: $text-primary;
+	font-size: 100%;
+	font-weight: bold;
+}

@@ -1,0 +1,98 @@
+/* ======================================
+ * ! Weather applet
+ * ====================================== */
+
+/* Overrides the '.menu' selector */
+.weather-menu {
+	.popup-menu-content {
+		padding: 0;
+	}
+
+	.popup-separator-menu-item {
+		background-image: none;
+		height: 0;
+	}
+}
+
+.current {
+	padding: $padding-l;
+
+	> * { padding: 0; }
+}
+
+.weather-current-location-link {
+	font-size: $font-size-xl;
+	padding: 0;
+
+	&:selected, &:hover {
+		color: $text-link;
+		text-decoration: underline;
+	}
+}
+
+.weather-current-summarybox {
+	padding: 0 $padding-m;
+}
+
+.weather-current-summary {
+	font-size: $font-size-xxxl;
+	color: $text-primary;
+}
+
+.weather-current-iconbox {padding-top: 0;}
+
+.weather-current-icon {
+	color: $text-secondary;
+	padding: 0 $padding-s;
+}
+
+.weather-current-databox {
+	padding: 0;
+
+	> * { spacing: $padding-xxs; }
+
+	&-captions {
+		color: $text-secondary;
+		text-align: right;
+	}
+
+	&-values { color: $text-primary; }
+}
+
+.weather-current-astronomy {
+	color: $text-secondary;
+}
+
+.forecast {
+	border-top: 1px $border-secondary;
+	background-color: $background-secondary;
+	padding: $padding-l;
+}
+
+.weather-forecast-box {
+	padding-right: $padding-xl;
+	spacing: $padding-m;
+	&:last-child { padding-right: 0; }
+}
+
+.weather-forecast-icon {
+	padding: 0;
+	color: $text-primary;
+}
+
+.weather-forecast-databox {
+	padding: 0;
+	spacing: $padding-xxs;
+}
+
+.weather-forecast-day {
+	color: $text-primary;
+	font-size: $font-size-lg;
+	font-weight: bold;
+}
+
+/* temperature */
+.weather-forecast-temperature {
+	color: $text-primary;
+	font-weight: bold;
+}

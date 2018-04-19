@@ -1,0 +1,31 @@
+// Standard font sizes
+$font-size-base: 100%;	// 100% == 12px
+
+$font-size-mega: round($font-size-base*4);
+$font-size-xxxl: round($font-size-base*2);
+$font-size-xxl:  round($font-size-base*1.5);
+$font-size-xl:   round($font-size-base*1.25);
+$font-size-lg:   round($font-size-base*1.1);
+$font-size-sm:   round($font-size-base*0.85);
+
+/* ======================================
+ * ! Font
+ * ====================================== */
+
+$font-family: Ubuntu, Roboto, Cantarell;
+
+stage {
+	font-family: $font-family;
+	font-size: $font-size-base;
+}
+
+.cinnamon-link {
+	color: $text-link;
+	font-weight: normal;
+	text-decoration: none;
+
+	&:hover {
+		color: $text-link;
+		text-decoration: underline;
+	}
+}

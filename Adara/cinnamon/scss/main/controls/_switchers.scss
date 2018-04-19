@@ -1,0 +1,16 @@
+/* ======================================
+ * ! Switchers
+ * ====================================== */
+
+.toggle-switch, .toggle-switch-us, .toggle-switch-intl {
+	@include size(30px, 16px);
+	background-image: url("img/controls/switch.svg");
+	background-position: 0px 0px;
+	background-color: $border-primary;
+	border-radius: 8px;
+
+	&:checked {
+		background-color: $accent-primary;
+		background-position: 14px 0px;
+	}
+}

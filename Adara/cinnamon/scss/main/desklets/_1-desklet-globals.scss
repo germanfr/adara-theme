@@ -1,0 +1,30 @@
+/* ======================================
+ * ! Desklets
+ * ====================================== */
+
+.desklet {
+	color: $text-primary;
+
+	&-with-borders, &-with-borders-and-header, &-header {
+		@include background-element;
+		text-shadow: none;
+	}
+
+	&-with-borders-and-header {
+		border-radius: 0 0 2px 2px;
+		border-top: none;
+	}
+
+	&-header {
+		border-radius: 2px 2px 0 0;
+		border-bottom: none;
+		padding: $padding-s;
+
+		font-size: $font-size-lg;
+		font-weight: normal;
+	}
+
+	&-drag-placeholder {
+		@include selection;
+	}
+}

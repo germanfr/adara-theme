@@ -1,0 +1,61 @@
+/* ======================================
+ * ! Applets
+ * ====================================== */
+
+$applet-padding: $padding-xs;
+/*
+ * Fullcolor icons have the 'applet-icon' class.
+ * Symbolic icons have the 'system-status-icon' class.
+ */
+.applet-icon,
+.system-status-icon {
+	icon-size: 16px;
+	padding: 0;
+	spacing: 0;
+}
+
+.applet-label {
+	color: $text-primary-invert;
+}
+
+.applet-separator {
+	.panel-top &, .panel-bottom & { padding: 0 $applet-padding; }
+	.panel-left &, .panel-right & { padding: $applet-padding 0; }
+
+	&-line {
+		background-color: $border-primary;
+		width: 1px;
+	}
+
+	&-line-vertical {
+		background-color: $border-primary;
+		height: 1px;
+	}
+}
+
+.applet-box {
+	color: $text-primary-invert;
+	spacing: round($applet-padding * 2 / 3);
+	border-color: transparent;
+	padding: 0 $applet-padding;
+	&.vertical { padding: $applet-padding 0; }
+
+	@each $pos in top, bottom, left, right {
+		.panel-#{$pos} & {
+			&:hover, &:checked {
+				border-#{$pos}-width: 1px;
+				padding-#{oposite-side($pos)}: 1px;
+			}
+		}
+	}
+
+	&:hover, &:checked {
+		border-color: $text-primary-invert;
+
+		.applet-icon { icon-shadow: 0 0 transparent; }
+	}
+
+	&:checked {
+		background-color: rgba($text-primary-invert, .1);
+	}
+}

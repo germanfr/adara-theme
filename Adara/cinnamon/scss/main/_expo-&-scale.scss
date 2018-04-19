@@ -1,0 +1,84 @@
+/* ======================================
+ * ! Expo view
+ * ====================================== */
+
+.expo-background {
+	background-color: rgba(#000, .9);
+}
+
+.expo-workspace-thumbnail-frame {
+	border: 1px #000;
+	box-shadow: 0px 0px 4px #000;
+}
+
+.workspace-thumbnails {
+	/* Using other than 32px causes close buttons to look blurry */
+	spacing: 32px;
+}
+
+/* This shades the workspace thumbnails */
+.workspace-thumbnails .workspace-overview-background-shade {
+	background-color: transparent;
+}
+
+.expo-workspaces-name-entry {
+	padding: $padding-xs;
+	text-align: center;
+}
+
+.workspace-close-button {
+	background-image: url("img/controls/close.svg");
+	background-size: 24px;
+	@include size(24px);
+	-cinnamon-close-overlap: 12px;
+
+	&:hover {
+		background-image: url("img/controls/close-hover.svg");
+	}
+}
+
+.workspace-add-button {
+	background-image: url("img/expo_scale/plus.svg");
+	background-color: rgba(#fff, .1);
+	border: 1px #000;
+	border-radius: 2px;
+	border-right: 0;
+	height: 256px;
+	width: 48px;
+
+	&:hover {
+		background-color: rgba(#fff, .15);
+	}
+}
+
+.window-close-area {
+	background-image: url("img/expo_scale/trash.svg");
+	background-color: rgba(#fff, .1);
+	border: 1px #000;
+	border-radius: 2px;
+	border-bottom: 0;
+	height: 64px;
+	width: 512px;
+}
+/* ======================================
+ * ! Windows overview
+ * ====================================== */
+
+/* The background for the scale view */
+.workspace-overview-background-shade {
+	@extend .expo-background;
+}
+
+.window-caption {
+	-cinnamon-caption-spacing: 12px;
+	color: $text-primary-invert;
+	font-size: $font-size-base;
+	font-weight: normal;
+	max-width: 16em;
+}
+
+.window-close {
+	@extend .workspace-close-button;
+}
+
+.window-iconbox {/* ! */}

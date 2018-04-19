@@ -1,0 +1,22 @@
+/* ======================================
+ * ! Slider
+ * ====================================== */
+
+.slider {
+	height: 14px;
+	min-width: 12em;
+	-slider-height: 4px;
+	-slider-border-width: 0px;
+
+	/* Active part */
+	-slider-background-color: $border-primary;
+	-slider-border-color: transparent;
+
+	/* Background part */
+	-slider-active-background-color: $accent-primary;
+	-slider-active-border-color: transparent;
+
+	/* Handle */
+	-slider-handle-radius: 6px;
+	color: $accent-primary;
+}

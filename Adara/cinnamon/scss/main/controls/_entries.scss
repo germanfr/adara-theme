@@ -1,0 +1,39 @@
+@mixin entry($width: 16em, $height: 1.1em) {
+	@include background-element(accent);
+	color: $text-secondary;
+	padding: $padding-xs;
+	width: $width;
+	height: $height;
+	font-size: 100%;
+	font-weight: normal;
+
+	&:focus, &:active, &:pressed, %caret {
+		color: $text-primary;
+		caret-color: $text-primary;
+		caret-size: 1px;
+		selected-color: $text-primary-invert;
+		selection-background-color: $accent-primary;
+	}
+
+	StIcon {
+		color: $text-secondary;
+		icon-size: 16px;
+	}
+
+	&:focus > StIcon,
+	&:active > StIcon,
+	&:pressed > StIcon {
+		color: $text-primary;
+	}
+}
+
+/* ======================================
+ * ! Entries
+ * ====================================== */
+
+StEntry,
+.menu StEntry,
+.modal-dialog StEntry,
+#notification StEntry {
+	@include entry;
+}

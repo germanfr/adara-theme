@@ -1,0 +1,46 @@
+// Shorthand for size properties
+@mixin size($width, $height:$width, $important:false) {
+	$important: if($important, !important, null);
+
+	width: $width $important;
+	height: $height $important;
+}
+
+@mixin background-element($level: primary) {
+	border-radius: 2px;
+	color: $text-primary;
+	@if $level == 'secondary'{
+    	border: 1px solid $border-secondary;
+		background-color: $background-secondary;
+	} @else if $level == 'accent' {
+		border: 1px solid $border-primary;
+		background-color: $background-accent;
+	} @else { // Primary
+		border: 1px solid $border-primary;
+		background-color: $background-primary;
+		box-shadow: 0 2px 6px rgba(#000, .25);
+	}
+}
+
+@mixin hover($radius:true) {
+	background-color: $background-hover;
+	@if $radius {
+		border-radius: 2px;
+	}
+}
+
+@function oposite-side($side) {
+	@if $side == 'top' {
+		@return 'bottom';
+	} @else if $side == 'bottom' {
+		@return 'top';
+	} @else if $side == 'right' {
+		@return 'left';
+	} @else {
+		@return 'right';
+	}
+}
+
+@function normalized-lightness($bg) {
+	@return (0.299 * red($bg) + 0.587 * green($bg) + 0.114 * blue($bg)) / 255;
+}

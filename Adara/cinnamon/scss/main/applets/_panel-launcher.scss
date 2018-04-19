@@ -1,0 +1,26 @@
+/* ======================================
+ * ! Panel Launchers Applet
+ * ====================================== */
+
+.panel-launchers {
+	spacing: 0px;
+	padding: 0px;
+
+	.launcher {
+		padding: 1px $applet-padding;
+		border-color: transparent;
+
+		.vertical & { padding: $applet-padding 1px; }
+
+		@each $pos in top, bottom, left, right {
+			.panel-#{$pos} & {
+				border-#{$pos}-width: 1px;
+				padding-#{$pos}: 0px;
+			}
+		}
+
+		&:hover {
+			border-color: $text-primary-invert;
+		}
+	}
+}

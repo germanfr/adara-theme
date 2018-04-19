@@ -1,0 +1,81 @@
+/* ======================================
+ * ! Slingshot
+ * ====================================== */
+
+/* Use to override the '.popup-menu-content' selector */
+.menu .slingshot {
+	padding: $padding-s;
+}
+
+/* Separator */
+.slingshot .separator {
+	background-color: $border-primary;
+}
+
+/* Entry */
+.menu .slingshot .entry {
+	background: none;
+	border: none;
+	box-shadow: 0 0 transparent;
+	@include entry;
+}
+
+/* Paginator */
+.menu .slingshot .button {
+	text-shadow: 0 0 transparent;
+	background: none;
+	border: none;
+	box-shadow: 0 0 transparent;
+	min-height: 1.5em;
+	@include btn-size(small);
+}
+
+/* Applications */
+.slingshot .button.app {
+	border-image: none;
+	font-weight: normal;
+	padding: $padding-s;
+
+	&:hover, &:focus {
+		@include hover;
+	}
+}
+
+/* Categories */
+.slingshot .sidebar {
+	padding: $padding-xs $padding-s;
+	spacing: $padding-xs;
+
+	.button {
+		border-image: none;
+		box-shadow: 0 0 transparent;
+		border: none;
+		padding: $padding-xs;
+		font-weight: normal;
+
+		&:hover,
+		&:hover:active,
+		&:hover:checked {
+			box-shadow: 0 0 transparent;
+			@include hover;
+		}
+
+		&:checked {
+			box-shadow: 0 0 transparent;
+			@include hover;
+			font-weight: bold;
+		}
+	}
+}
+
+/* Linked buttons */
+.menu .slingshot .linked .button {
+	@include size(20px);
+	@include btn-linked-primary;
+	@include btn-size(small);
+
+	/* Override default style bug */
+	&:hover:last-child {
+		border: none;
+	}
+}
