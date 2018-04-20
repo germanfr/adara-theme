@@ -377,6 +377,7 @@ StEntry:pressed > StIcon,
   background-color: #f0f0f0;
   border-right-width: 0;
   border-left-width: 0;
+  border-radius: 0;
   padding: 2px 0;
 }
 
