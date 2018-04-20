@@ -60,21 +60,20 @@ symlink_theme () {
 # Set variable color in the options file (sass)
 set_color () {
     local varname="$1"
-    local new_color="$2"
+    local value="$2"
 
-    if [[ $new_color =~ ^[0-9a-fA-F]{6}$ ]]
-    then
-        sed -i "s/\$$varname:.*;/\$$varname: #$new_color;/g" "$sass_optfile"
-    else
-        echo "$new_color is not a valid hexadecimal color. See --help."
-        return 1;
-    fi
+    sed -i "s/\$$varname:.*;/\$$varname: $value;/g" "$sass_optfile"
 }
 
 compile_theme () {
     cd "$theme/cinnamon/"
-    if [ ! -z $2 ]; then set_color 'theme-color' $2; fi && \
+    if [[ $2 == 'dark' ]]; then
+        set_color 'dark-mode' 'true'
+    else
+        set_color 'dark-mode' 'false'
+    fi && \
     compile_sass
+    cd -
 }
 
 install_theme () {
@@ -107,30 +106,22 @@ package_theme () {
 }
 
 package_all () {
-    local out="build"
-    mkdir -p $out && rm -rf "$out/*"
+    local build=$(mktemp -d)
 
-    # Compile original first but move it because all unzip to that same folder
+    compile_theme ' ' dark > /dev/null
     package_theme > /dev/null
-    unzip -q "$zip_name" -d build
-    mv "$out/$theme" "$out/$theme-original"
+    unzip -q "$zip_name" -d $build
+    mv "$build/$theme" "$build/$theme Dark"
 
-    while read -p "Input a color (Ctrl+D to exit): " color; do
-        cd "$theme/cinnamon/"
-        set_color 'theme-color' $color || { cd ../../ && break; }
-        compile_sass
-        cd ../../
-        package_theme > /dev/null
-        unzip -q "$zip_name" -d $out
-        mv "$out/$theme" "$out/$theme-$color"
-    done
-    mv "$out/$theme-original" "$out/$theme"
+    compile_theme > /dev/null
+    package_theme > /dev/null
+    unzip -q "$zip_name" -d $build
 
-    rm -f "$zip_name"
-    cd $out/
-    zip -r "$zip_name" ./*
-    mv "$zip_name" ../
-    rm -rf ../$out
+    cd $build
+    zip -r "$zip_name" *
+    cd -
+    mv -f "$build/$zip_name" .
+    rm -rf $build
 }
 
 spices_package () {
@@ -217,9 +208,11 @@ ${bold}USAGE${normal}
 ${bold}OPTIONS${normal}
   --install         Install the theme into the system.
 
+  --help            Show help.
+
 ${bold}DEVELOPMENT OPTIONS${normal}
-  --compile [COLOR] Convert SASS files into CSS.
-                    COLOR: provide a theme color (optional).
+  --compile [dark]  Convert SASS files into CSS.
+                    dark: compile the dark variant (optional).
 
   --pkg [all]       Package files ready to be uploaded to the Cinnamon Spices.
                     Add 'all' to generate all the color variants provided.
@@ -228,8 +221,6 @@ ${bold}DEVELOPMENT OPTIONS${normal}
                     performance stripping metadata and other stuff.
 
   --watch           Refresh the theme while making changes to files and images.
-
-  --help            Show help.
 "
 }
 
