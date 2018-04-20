@@ -36,11 +36,11 @@
 }
 .calendar-change-month-back,
 .calendar-change-month-forward:rtl {
-	background-image: url("img/controls/calendar-arrow-left.svg");
+	background-image: asset("img/controls/calendar-arrow-left.svg");
 }
 .calendar-change-month-forward,
 .calendar-change-month-back:rtl {
-	background-image: url("img/controls/calendar-arrow-right.svg");
+	background-image: asset("img/controls/calendar-arrow-right.svg");
 }
 
 .calendar-day-heading {

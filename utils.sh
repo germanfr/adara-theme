@@ -12,10 +12,13 @@ sass_output='cinnamon.css'
 sass_style='expanded'
 sass_optfile='scss/base/_options.scss'
 
-assets_dir='img'
+assets_dirs=(
+    'img'
+    'dark-img'
+)
 
 watch_dirs=(
-    $assets_dir
+    ${assets_dirs[@]}
     'scss'
 )
 
@@ -165,7 +168,7 @@ simplify_assets () {
 
         # temp dir for the output (can't output to self)
         local tmp_dir=$(mktemp -d)
-        local assets_list=$(find $assets_dir/ -name '*.svg')
+        local assets_list=$(find ${assets_dirs[@]} -name '*.svg')
         local n_assets=$(echo "$assets_list" | wc -l)
         local completed=0
 

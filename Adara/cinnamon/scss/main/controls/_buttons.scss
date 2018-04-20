@@ -52,12 +52,12 @@
 ){
 	@include btn-common;
 
-	border-image: url("img/buttons/button-#{$bg-primary}__#{$position}.svg") 8;
+	border-image: asset("img/buttons/button-#{$bg-primary}__#{$position}.svg") 8;
 	color: $color-primary;
 	StIcon { color: $color-primary; }
 
 	&:hover {
-		border-image: url("img/buttons/button-#{$bg-primary}__#{$position}--hover.svg") 8;
+		border-image: asset("img/buttons/button-#{$bg-primary}__#{$position}--hover.svg") 8;
 		color: $color-hover;
 		StIcon { color: $color-hover; }
 	}
@@ -67,18 +67,18 @@
 	&:activate,
 	&:checked,
 	&:selected {
-		border-image: url("img/buttons/button-#{$bg-primary}__#{$position}--pressed.svg") 8;
+		border-image: asset("img/buttons/button-#{$bg-primary}__#{$position}--pressed.svg") 8;
 		color: $color-pressed;
 		StIcon { color: $color-pressed; }
 	}
 
 	&:focus {
-		border-image: url("img/buttons/button-#{$bg-secondary}__#{$position}.svg") 8;
+		border-image: asset("img/buttons/button-#{$bg-secondary}__#{$position}.svg") 8;
 		color: $text-primary;
 		StIcon { color: $text-primary; }
 
 		&:hover {
-			border-image: url("img/buttons/button-#{$bg-secondary}__#{$position}--hover.svg") 8;
+			border-image: asset("img/buttons/button-#{$bg-secondary}__#{$position}--hover.svg") 8;
 		}
 
 		&:active,
@@ -86,7 +86,7 @@
 		&:activate,
 		&:checked,
 		&:selected {
-			border-image: url("img/buttons/button-#{$bg-secondary}__#{$position}--pressed.svg") 8;
+			border-image: asset("img/buttons/button-#{$bg-secondary}__#{$position}--pressed.svg") 8;
 			color: $color-pressed;
 			StIcon { color: $color-pressed; }
 		}
@@ -98,7 +98,7 @@
 	&:focus:grayed,
 	&:focus:disabled,
 	&:focus:insensitive {
-		border-image: url("img/buttons/button-#{$bg-primary}__#{$position}.svg") 8;
+		border-image: asset("img/buttons/button-#{$bg-primary}__#{$position}.svg") 8;
 		color: $color-disabled;
 		StIcon { color: $color-disabled; }
 	}

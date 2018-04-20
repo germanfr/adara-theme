@@ -10,13 +10,13 @@
 	}
 
 	.window-close {
-		background-image: url("img/controls/close-simple.svg");
+		background-image: asset("img/controls/close-simple.svg");
 		background-size: 16px;
 		@include size(16px);
 		margin-top: $padding-xxs;
 
 		&:hover {
-			background-image: url("img/controls/close-simple-hover.svg");
+			background-image: asset("img/controls/close-simple-hover.svg");
 		}
 	}
 

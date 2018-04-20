@@ -1,19 +1,17 @@
 // Shorthand for size properties
-@mixin size($width, $height:$width, $important:false) {
-	$important: if($important, !important, null);
-
-	width: $width $important;
-	height: $height $important;
+@mixin size($width, $height:$width) {
+	width: $width;
+	height: $height;
 }
 
 @mixin background-element($level: primary) {
 	border-radius: 2px;
 	color: $text-primary;
 	@if $level == 'secondary'{
-    	border: 1px solid $border-secondary;
+		border: 1px solid $border-secondary;
 		background-color: $background-secondary;
 	} @else if $level == 'accent' {
-		border: 1px solid $border-primary;
+		border: 1px solid $border-accent;
 		background-color: $background-accent;
 	} @else { // Primary
 		border: 1px solid $border-primary;
@@ -41,11 +39,22 @@
 	}
 }
 
+@function light-dark($light, $dark) {
+	@if variable-exists(dark-mode) and $dark-mode {
+		@return $dark;
+	} @else {
+		@return $light;
+	}
+}
+
+@function asset($url) {
+	@if variable-exists(dark-mode) and $dark-mode {
+		$url: 'dark-' + $url;
+	}
+	@return url($url);
+}
+
 @function resolve-transparency($color, $background) {
 	$alpha: alpha($color) * 100%;
 	@return mix(opacify($color, 1), $background, $alpha);
-}
-
-@function normalized-lightness($bg) {
-	@return (0.299 * red($bg) + 0.587 * green($bg) + 0.114 * blue($bg)) / 255;
 }
