@@ -41,6 +41,11 @@
 	}
 }
 
+@function resolve-transparency($color, $background) {
+	$alpha: alpha($color) * 100%;
+	@return mix(opacify($color, 1), $background, $alpha);
+}
+
 @function normalized-lightness($bg) {
 	@return (0.299 * red($bg) + 0.587 * green($bg) + 0.114 * blue($bg)) / 255;
 }

@@ -1028,7 +1028,7 @@ StEntry:pressed > StIcon,
 
 .sound-player .slider, .sound-player .popup-slider-menu-item {
   height: .45em;
-  -slider-background-color: #cccccc;
+  -slider-background-color: #c8c8c8;
   -slider-active-background-color: #444;
   -slider-handle-radius: 0;
   border-image: none;
