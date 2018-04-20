@@ -752,6 +752,7 @@ StEntry:pressed > StIcon,
 
 .calendar-today {
   background-color: rgba(51, 153, 204, 0.25);
+  border-color: #c8c8c8;
   font-weight: bold;
 }
 
