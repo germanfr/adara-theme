@@ -1218,7 +1218,7 @@ StEntry:pressed > StIcon,
 }
 
 .menu-applications-outer-box .menu-applications-inner-box {
-  padding: 0 8px;
+  margin: 0 8px;
 }
 
 .menu-applications-outer-box .menu-applications-scrollbox {
