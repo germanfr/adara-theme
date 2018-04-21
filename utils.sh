@@ -1,9 +1,18 @@
 #!/bin/bash
 
+dark=false
+while getopts d o
+do case "$o" in
+d) dark=true;;
+esac
+done
+shift $(($OPTIND-1))
+
 # ======================================
 #  Constants
 # ======================================
 theme='Adara'
+if $dark; then theme+=' Dark'; fi
 
 theme_dir="$HOME/.themes"
 
@@ -14,14 +23,12 @@ sass_optfile='scss/base/_options.scss'
 
 assets_dirs=(
     'img'
-    'dark-img'
 )
 
 watch_dirs=(
     ${assets_dirs[@]}
     'scss'
 )
-
 
 zip_name="$theme.zip"
 
@@ -30,13 +37,13 @@ package_files=(
     "$theme/cinnamon/cinnamon.css"
     "$theme/cinnamon/thumbnail.png"
     "$theme/cinnamon/img/"
+    "$theme/screenshot.png"
 )
 
 # Files that need to be moved into the $theme folder
 extra_files=(
     'LICENSE'
     'README.md'
-    'screenshot.png'
 )
 
 # ======================================
@@ -67,13 +74,7 @@ set_color () {
 
 compile_theme () {
     cd "$theme/cinnamon/"
-    if [[ $2 == 'dark' ]]; then
-        ln -fs dark-screenshot.png ../../screenshot.png
-        set_color 'dark-mode' 'true'
-    else
-        ln -fs light-screenshot.png ../../screenshot.png
-        set_color 'dark-mode' 'false'
-    fi && \
+    set_color 'dark-mode' "$dark"
     compile_sass
     cd -
 }
@@ -82,56 +83,25 @@ install_theme () {
     package_theme &> /dev/null
     mkdir -p "$theme_dir"
     rm -rf "$theme_dir/$theme"
-    pwd
-    unzip $zip_name -d "$theme_dir"
-    rm $zip_name
+
+    unzip "$zip_name" -d "$theme_dir"
+    rm "$zip_name"
 
     restart_theme
 }
 
 package_theme () {
-    if type sassc; then
-        (cd "$theme/cinnamon/" && compile_sass)
-    fi
-
     rm -f "$zip_name"
     zip -r "$zip_name" "${package_files[@]}"
 
-    for ef in ${extra_files[@]} ;do
-        local filename=`basename $ef`
+    for ef in "${extra_files[@]}"; do
+        local filename=`basename "$ef"`
         ln -rfs "$ef" "$theme/$filename"
         zip -r "$zip_name" "$theme/$filename"
         rm -rf "$theme/$filename"
     done
 
     echo "Files compressed into $zip_name"
-}
-
-package_all () {
-    local build=$(mktemp -d)
-
-    compile_theme ' ' dark > /dev/null
-    package_theme > /dev/null
-    unzip -q "$zip_name" -d $build
-    mv "$build/$theme" "$build/$theme Dark"
-
-    compile_theme > /dev/null
-    package_theme > /dev/null
-    unzip -q "$zip_name" -d $build
-
-    cd $build
-    zip -r "$zip_name" *
-    cd -
-    mv -f "$build/$zip_name" .
-    rm -rf $build
-}
-
-spices_package () {
-    if [ "$2" == "all" ]; then
-        package_all
-    else
-        package_theme
-    fi
 }
 
 simplify_assets () {
@@ -184,6 +154,7 @@ simplify_assets () {
 }
 
 watch_files () {
+    compile_theme
     symlink_theme
     cd "$theme/cinnamon/"
     echo 'Started watching files (Ctrl+C to exit)'
@@ -205,24 +176,25 @@ show_help () {
 
     echo "\
 ${bold}USAGE${normal}
-    ./$(basename $0) --OPTION
+  ./$(basename $0) [-d] COMMAND
 
 ${bold}OPTIONS${normal}
-  --install         Install the theme into the system.
+  -d            The command applies to the dark variant.
 
-  --help            Show help.
+${bold}COMMANDS${normal}
+  install       Install the theme into the system.
 
-${bold}DEVELOPMENT OPTIONS${normal}
-  --compile [dark]  Convert SASS files into CSS.
-                    dark: compile the dark variant (optional).
+  help          Show help.
 
-  --pkg [all]       Package files ready to be uploaded to the Cinnamon Spices.
-                    Add 'all' to generate all the color variants provided.
+${bold}DEVELOPMENT COMMANDS${normal}
+  compile       Convert SASS files into CSS.
 
-  --simplify        Optimize SVG assets for a smaller size and a better theme
-                    performance stripping metadata and other stuff.
+  pkg           Package files ready to be uploaded to the Cinnamon Spices.
 
-  --watch           Refresh the theme while making changes to files and images.
+  simplify      Optimize SVG assets for a smaller size and a better theme
+                performance stripping metadata and other stuff.
+
+  watch         Refresh the theme while making changes to files and images.
 "
 }
 
@@ -234,21 +206,22 @@ declare -A operations
 operations[install]=install_theme
 operations[compile]=compile_theme
 operations[help]=show_help
-operations[pkg]=spices_package
+operations[pkg]=package_theme
+operations[pkg-all]=pkg_all
 operations[simplify]=simplify_assets
 operations[watch]=watch_files
 
-if [[ $1 == --?* ]]
-then
-    opname=${1:2}
-    opfunc="${operations[$opname]}"
+opname="$1"
+if [[ -z $opname ]]
+    then show_help; exit
+fi
 
-    if [[ -n "$opfunc" ]]
-    then $opfunc "$@"
-    else
-        echo "$opname: command not found"
-        show_help
-    fi
+opfunc="${operations[$opname]}"
+shift
+
+if [[ -n "$opfunc" ]]
+then $opfunc "$@"
 else
+    echo "$opname: command not found"
     show_help
 fi

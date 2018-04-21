@@ -48,9 +48,9 @@
 }
 
 @function asset($url) {
-	@if variable-exists(dark-mode) and $dark-mode {
-		$url: 'dark-' + $url;
-	}
+	// @if variable-exists(dark-mode) and $dark-mode {
+	// 	$url: 'dark-' + $url;
+	// }
 	@return url($url);
 }
 
