@@ -1839,15 +1839,16 @@ StEntry:pressed > StIcon,
   border: 1px solid rgba(0, 0, 0, 0.35);
   background-color: #090909;
   border-radius: 0;
+  spacing: 6px;
 }
 
 .keyboard-layout {
-  spacing: .45em;
-  padding: 8px;
+  spacing: 6px;
+  padding: 10px;
 }
 
 .keyboard-row {
-  spacing: .45em;
+  spacing: 6px;
 }
 
 .keyboard-key {

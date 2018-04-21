@@ -5,15 +5,16 @@
 #keyboard {
 	@include background-element(secondary);
 	border-radius: 0;
+	spacing: $padding-xs;
 }
 
 .keyboard-layout {
-	spacing: .45em; // Space between rows
-	padding: 8px;
+	spacing: $padding-xs; // Space between rows
+	padding: $padding-m;
 }
 
 .keyboard-row {
-	spacing: .45em; // Horizontal space between keys
+	spacing: $padding-xs; // Horizontal space between keys
 }
 
 .keyboard-key {
