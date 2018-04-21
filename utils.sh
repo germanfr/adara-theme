@@ -68,8 +68,10 @@ set_color () {
 compile_theme () {
     cd "$theme/cinnamon/"
     if [[ $2 == 'dark' ]]; then
+        ln -fs dark-screenshot.png ../../screenshot.png
         set_color 'dark-mode' 'true'
     else
+        ln -fs light-screenshot.png ../../screenshot.png
         set_color 'dark-mode' 'false'
     fi && \
     compile_sass

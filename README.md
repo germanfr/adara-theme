@@ -1,7 +1,7 @@
 # [Adara Cinnamon theme][repo]
 > Just a neutral theme
 
-[![](screenshot.png)][repo]
+[![](light-screenshot.png)![](dark-screenshot.png)][repo]
 
 ## Installation
 #### From source
