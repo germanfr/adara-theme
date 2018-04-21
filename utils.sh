@@ -131,7 +131,7 @@ simplify_assets () {
 
         # temp dir for the output (can't output to self)
         local tmp_dir=$(mktemp -d)
-        local assets_list=$(find ${assets_dirs[@]} -name '*.svg')
+        local assets_list=$(find ${assets_dirs[@]} -name '*.svg' -type f)
         local n_assets=$(echo "$assets_list" | wc -l)
         local completed=0
 
