@@ -1045,21 +1045,25 @@ StEntry:pressed > StIcon,
   padding: 0 2px;
 }
 
-.workspace-switcher.vertical {
+.vertical .workspace-switcher {
   padding: 2px 0;
 }
 
 .workspace-button {
-  width: 24px;
-  height: 24px;
   color: rgba(255, 255, 255, 0.6);
   border-color: transparent;
-  padding: 1px 2px;
+  padding: 1px 10px;
   /* vpadding not working fine */
 }
 
 .workspace-button.vertical {
-  padding: 0px 1px;
+  padding: 6px 1px;
+}
+
+.workspace-button StLabel {
+  /* Fix for Cinnamon < 3.8 (2018) */
+  min-width: .6em;
+  text-align: center;
 }
 
 .panel-top .workspace-button {
@@ -1098,7 +1102,7 @@ StEntry:pressed > StIcon,
   padding: 0 6px;
 }
 
-.panel-left .workspace-graph, .panel-right .workspace-graph {
+.vertical .workspace-graph {
   padding: 6px 0;
 }
 
