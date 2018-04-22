@@ -334,7 +334,7 @@ StEntry:pressed > StIcon,
 .popup-menu-content {
   color: rgba(255, 255, 255, 0.95);
   padding: 2px 0;
-  min-width: 8em;
+  min-width: 11em;
   font-size: 100%;
 }
 
