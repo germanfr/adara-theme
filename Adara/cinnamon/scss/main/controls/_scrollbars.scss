@@ -13,7 +13,7 @@ StScrollBar {
 	min-height: 12px;
 
 	StBin#trough {
-		border-image: asset("img/controls/scroll-trough.svg") 6;
+		border-image: url("img/controls/scroll-trough.svg") 6;
 	}
 
 	StButton#vhandle,

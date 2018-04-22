@@ -47,18 +47,10 @@
 	}
 }
 
-@function asset($url) {
-	// @if variable-exists(dark-mode) and $dark-mode {
-	// 	$url: 'dark-' + $url;
-	// }
-	@return url($url);
-}
-
 @function resolve-transparency($color, $background) {
 	$alpha: alpha($color) * 100%;
 	@return mix(opacify($color, 1), $background, $alpha);
 }
-
 
 @mixin cinnamon-gradient($direction, $start, $end: transparent) {
 	@if $direction == 'top' or $direction == 'bottom' {

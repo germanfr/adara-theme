@@ -49,9 +49,9 @@
 }
 
 .close-button {
-	background-image: asset("img/controls/close-simple.svg");
+	background-image: url("img/controls/close-simple.svg");
 
-	&:hover { background-image: asset("img/controls/close-simple-hover.svg"); }
+	&:hover { background-image: url("img/controls/close-simple-hover.svg"); }
 }
 
 /* buttons */
