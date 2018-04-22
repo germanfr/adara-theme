@@ -1840,7 +1840,7 @@ StEntry:pressed > StIcon,
  */
 #uiGroup > #altTabPopup {
   padding: 0;
-  spacing: 2px;
+  spacing: 6px;
 }
 
 #uiGroup > #altTabPopup .switcher-list {
@@ -1855,7 +1855,7 @@ StEntry:pressed > StIcon,
 }
 
 #uiGroup > #altTabPopup .switcher-list .item-box {
-  padding: .5em;
+  padding: 6px;
 }
 
 #uiGroup > #altTabPopup .switcher-list .item-box:selected {
@@ -1866,8 +1866,8 @@ StEntry:pressed > StIcon,
 }
 
 #uiGroup > #altTabPopup .switcher-list .item-box:selected:last-child {
-  border-image: none;
-  border: none;
+  padding: 6px;
+  background: none;
   color: rgba(255, 255, 255, 0.95);
 }
 
@@ -1889,7 +1889,6 @@ StEntry:pressed > StIcon,
   border: 1px solid rgba(0, 0, 0, 0.45);
   background-color: #111111;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  color: rgba(255, 255, 255, 0.95);
   font-weight: normal;
 }
 
