@@ -58,3 +58,20 @@
 	$alpha: alpha($color) * 100%;
 	@return mix(opacify($color, 1), $background, $alpha);
 }
+
+
+@mixin cinnamon-gradient($direction, $start, $end: transparent) {
+	@if $direction == 'top' or $direction == 'bottom' {
+		background-gradient-direction: vertical;
+	} @else {
+		background-gradient-direction: horizontal;
+	}
+
+	@if $direction == 'bottom' or $direction == 'right' {
+		background-gradient-start: $start;
+		background-gradient-end: $end;
+	} @else {
+		background-gradient-start: $end;
+		background-gradient-end: $start;
+	}
+}

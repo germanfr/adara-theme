@@ -433,10 +433,26 @@ StEntry:pressed > StIcon,
   border-bottom-width: 1px;
   border-color: rgba(0, 0, 0, 0.2);
   /* When panel settings is open */
+  /* Panel edit mode */
 }
 
 .panel-top:highlight .panelLeft, .panel-top:highlight .panelCenter, .panel-top:highlight .panelRight {
-  background-color: rgba(255, 204, 0, 0.5);
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(255, 204, 0, 0.25);
+}
+
+.panel-top .panelLeft:dnd,
+.panel-top .panelRight:dnd {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(255, 204, 0, 0.25);
+}
+
+.panel-top .panelCenter:dnd {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(51, 153, 204, 0.25);
 }
 
 .panel-bottom {
@@ -447,10 +463,26 @@ StEntry:pressed > StIcon,
   border-top-width: 1px;
   border-color: rgba(0, 0, 0, 0.2);
   /* When panel settings is open */
+  /* Panel edit mode */
 }
 
 .panel-bottom:highlight .panelLeft, .panel-bottom:highlight .panelCenter, .panel-bottom:highlight .panelRight {
-  background-color: rgba(255, 204, 0, 0.5);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 204, 0, 0.25);
+  background-gradient-end: transparent;
+}
+
+.panel-bottom .panelLeft:dnd,
+.panel-bottom .panelRight:dnd {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 204, 0, 0.25);
+  background-gradient-end: transparent;
+}
+
+.panel-bottom .panelCenter:dnd {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(51, 153, 204, 0.25);
+  background-gradient-end: transparent;
 }
 
 .panel-left {
@@ -461,10 +493,26 @@ StEntry:pressed > StIcon,
   border-right-width: 1px;
   border-color: rgba(0, 0, 0, 0.2);
   /* When panel settings is open */
+  /* Panel edit mode */
 }
 
 .panel-left:highlight .panelLeft, .panel-left:highlight .panelCenter, .panel-left:highlight .panelRight {
-  background-color: rgba(255, 204, 0, 0.5);
+  background-gradient-direction: horizontal;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(255, 204, 0, 0.25);
+}
+
+.panel-left .panelLeft:dnd,
+.panel-left .panelRight:dnd {
+  background-gradient-direction: horizontal;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(255, 204, 0, 0.25);
+}
+
+.panel-left .panelCenter:dnd {
+  background-gradient-direction: horizontal;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(51, 153, 204, 0.25);
 }
 
 .panel-right {
@@ -475,32 +523,38 @@ StEntry:pressed > StIcon,
   border-left-width: 1px;
   border-color: rgba(0, 0, 0, 0.2);
   /* When panel settings is open */
+  /* Panel edit mode */
 }
 
 .panel-right:highlight .panelLeft, .panel-right:highlight .panelCenter, .panel-right:highlight .panelRight {
-  background-color: rgba(255, 204, 0, 0.5);
+  background-gradient-direction: horizontal;
+  background-gradient-start: rgba(255, 204, 0, 0.25);
+  background-gradient-end: transparent;
+}
+
+.panel-right .panelLeft:dnd,
+.panel-right .panelRight:dnd {
+  background-gradient-direction: horizontal;
+  background-gradient-start: rgba(255, 204, 0, 0.25);
+  background-gradient-end: transparent;
+}
+
+.panel-right .panelCenter:dnd {
+  background-gradient-direction: horizontal;
+  background-gradient-start: rgba(51, 153, 204, 0.25);
+  background-gradient-end: transparent;
 }
 
 .panelLeft, .panelCenter, .panelRight {
   spacing: 0;
 }
 
-/* Panel edit mode */
-.panelLeft:dnd,
-.panelRight:dnd {
+.panel-dummy {
   background-color: rgba(255, 204, 0, 0.5);
 }
 
-.panelCenter:dnd {
-  background-color: rgba(255, 51, 51, 0.5);
-}
-
-.panel-dummy {
-  background-color: rgba(255, 204, 0, 0.75);
-}
-
 .panel-dummy:entered {
-  background-color: rgba(255, 204, 0, 0.9);
+  background-color: rgba(51, 204, 51, 0.75);
 }
 
 /* ======================================
@@ -629,22 +683,22 @@ StEntry:pressed > StIcon,
   padding: 6px 0;
 }
 
-.panel-top .applet-box:hover, .panel-top .applet-box:checked {
+.panel-top .applet-box:hover, .panel-top .applet-box:checked, .panel-top .applet-box:highlight {
   border-top-width: 1px;
   padding-bottom: 1px;
 }
 
-.panel-bottom .applet-box:hover, .panel-bottom .applet-box:checked {
+.panel-bottom .applet-box:hover, .panel-bottom .applet-box:checked, .panel-bottom .applet-box:highlight {
   border-bottom-width: 1px;
   padding-top: 1px;
 }
 
-.panel-left .applet-box:hover, .panel-left .applet-box:checked {
+.panel-left .applet-box:hover, .panel-left .applet-box:checked, .panel-left .applet-box:highlight {
   border-left-width: 1px;
   padding-right: 1px;
 }
 
-.panel-right .applet-box:hover, .panel-right .applet-box:checked {
+.panel-right .applet-box:hover, .panel-right .applet-box:checked, .panel-right .applet-box:highlight {
   border-right-width: 1px;
   padding-left: 1px;
 }
@@ -659,6 +713,11 @@ StEntry:pressed > StIcon,
 
 .applet-box:checked {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.applet-box:highlight {
+  border-color: #ffcc00;
+  background-color: rgba(255, 204, 0, 0.1);
 }
 
 /* ======================================

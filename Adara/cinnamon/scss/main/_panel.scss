@@ -16,8 +16,18 @@ $panel-width: 43px;
 		/* When panel settings is open */
 		&:highlight {
 			.panelLeft, .panelCenter, .panelRight {
-				background-color: rgba($accent-hlight, .5);
+				@include cinnamon-gradient(#{$pos}, rgba($accent-hlight, .25));
 			}
+		}
+
+		/* Panel edit mode */
+		.panelLeft:dnd,
+		.panelRight:dnd {
+			@include cinnamon-gradient(#{$pos}, rgba($accent-hlight, .25));
+		}
+
+		.panelCenter:dnd {
+			@include cinnamon-gradient(#{$pos}, rgba($accent-info, .25));
 		}
 	}
 }
@@ -26,18 +36,8 @@ $panel-width: 43px;
 	spacing: 0;
 }
 
-/* Panel edit mode */
-.panelLeft:dnd,
-.panelRight:dnd {
-	background-color: rgba($accent-hlight, .5);
-}
-
-.panelCenter:dnd {
-	background-color: rgba($accent-danger, .5);
-}
-
 .panel-dummy {
-	background-color: rgba($accent-hlight, .75);
+	background-color: rgba($accent-hlight, .5);
 
-	&:entered { background-color: rgba($accent-hlight, .9); }
+	&:entered { background-color: rgba($accent-success, .75); }
 }

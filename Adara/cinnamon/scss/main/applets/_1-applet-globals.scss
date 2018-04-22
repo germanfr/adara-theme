@@ -42,10 +42,11 @@ $applet-padding: $padding-xs;
 
 	@each $pos in top, bottom, left, right {
 		.panel-#{$pos} & {
-			&:hover, &:checked {
+			&:hover, &:checked, &:highlight {
 				border-#{$pos}-width: 1px;
 				padding-#{oposite-side($pos)}: 1px;
 			}
+
 		}
 	}
 
@@ -58,4 +59,10 @@ $applet-padding: $padding-xs;
 	&:checked {
 		background-color: rgba($text-primary-invert, .1);
 	}
+
+	&:highlight {
+		border-color: $accent-hlight;
+		background-color: rgba($accent-hlight, .1);
+	}
+
 }
