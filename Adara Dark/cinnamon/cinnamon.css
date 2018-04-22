@@ -1186,7 +1186,7 @@ StEntry:pressed > StIcon,
 /* ======================================
  * ! App menu applet
  * ====================================== */
-.menu-background.menu {
+.menu-background.menu .popup-menu-content {
   padding: 8px;
 }
 
@@ -1261,7 +1261,7 @@ StEntry:pressed > StIcon,
 }
 
 .menu-selected-app-box {
-  margin: 8px 8px 2px;
+  margin: 8px 6px 2px;
   text-align: right;
 }
 

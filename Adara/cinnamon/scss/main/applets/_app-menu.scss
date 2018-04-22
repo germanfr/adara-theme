@@ -2,8 +2,10 @@
  * ! App menu applet
  * ====================================== */
 
-.menu-background.menu {
-	padding: $padding-s;
+$menu-spacing: $padding-s;
+
+.menu-background.menu .popup-menu-content {
+	padding: $menu-spacing;
 }
 
 .menu-favorites-box {
@@ -26,10 +28,10 @@
 }
 
 .menu-applications-outer-box {
-	spacing: $padding-s;
+	spacing: $menu-spacing;
 
 	.menu-applications-inner-box {
-		margin: 0 $padding-s;
+		margin: 0 $menu-spacing;
 	}
 
 	.menu-applications-scrollbox {
@@ -63,7 +65,7 @@
 }
 
 .menu-selected-app-box {
-	margin: $padding-s $padding-s $padding-xxs;
+	margin: $menu-spacing $padding-xs $padding-xxs;
 	text-align: right;
 }
 
@@ -77,7 +79,7 @@
 }
 
 .menu-search-box {
-	padding: 0 0 $padding-s;
+	padding: 0 0 $menu-spacing;
 }
 
 /* The right click menu */
