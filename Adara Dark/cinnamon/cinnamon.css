@@ -1223,6 +1223,11 @@ StEntry:pressed > StIcon,
   border-color: rgba(255, 255, 255, 0.85);
 }
 
+.panel-launchers .launcher .icon-box {
+  /* 1px padding bug */
+  padding: 0;
+}
+
 /* ======================================
  * ! User Applet
  * ====================================== */

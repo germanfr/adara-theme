@@ -22,5 +22,10 @@
 		&:hover {
 			border-color: $text-primary-invert;
 		}
+
+		.icon-box {
+			/* 1px padding bug */
+			padding: 0;
+		}
 	}
 }
