@@ -4,9 +4,9 @@
 
 .user-box {
 	padding: $padding-s;
-	padding-bottom: $padding-xs;
+	padding-top: $padding-s - $padding-xxs; // Compensate popupmenu extra top padding
+	padding-bottom: $padding-xxs;
 	spacing: $padding-xs;
-	margin: 0 $padding-xxs; // Compensate popupmenu extra top padding
 }
 
 .user-icon {

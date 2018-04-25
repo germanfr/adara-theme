@@ -7,10 +7,10 @@
 
 	> StBoxLayout:first-child {
 		padding: $padding-xs;
+		padding-top: $padding-xs - $padding-xxs; // Compensate popupmenu extra top padding
 		spacing: $padding-xs;
 		font-weight: normal;
 		font-size: $font-size-lg;
-		margin: 0 $padding-xxs $padding-xxs; // Compensate popupmenu extra top padding
 
 		StButton {
 			@include btn-primary;

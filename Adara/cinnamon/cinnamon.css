@@ -917,10 +917,10 @@ StEntry:pressed > StIcon,
 
 .sound-player > StBoxLayout:first-child {
   padding: 6px;
+  padding-top: 4px;
   spacing: 6px;
   font-weight: normal;
   font-size: 110%;
-  margin: 0 2px 2px;
 }
 
 .sound-player > StBoxLayout:first-child StButton {
@@ -1233,9 +1233,9 @@ StEntry:pressed > StIcon,
  * ====================================== */
 .user-box {
   padding: 8px;
-  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-bottom: 2px;
   spacing: 6px;
-  margin: 0 2px;
 }
 
 .user-icon {
