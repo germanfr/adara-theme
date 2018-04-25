@@ -46,18 +46,18 @@
 
 	.workspace {
 		background-color: rgba(#fff, .1);
-		border: 1px #000;
+		border: 1px opacify($background-panel, 1);
 
 		&:active {
-			border-color: $accent-primary;
-			background-color: rgba(#fff, .1);
+			background-color: rgba(#000, .5);
+			border-color: opacify($text-primary-invert, 1);
 		}
 
 		.windows {
-			-active-window-background: rgba(#eee, .9);
-			-active-window-border: rgba(#000, .25);
-			-inactive-window-background: rgba(#ccc, .25);
-			-inactive-window-border: rgba(#000, .2);
+			-active-window-background: rgba(#eee, .75);
+			-active-window-border: #000;
+			-inactive-window-background: rgba(#7f7f7f, .5);
+			-inactive-window-border: rgba(#000, .75);
 		}
 	}
 }
