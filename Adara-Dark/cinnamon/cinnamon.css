@@ -1004,7 +1004,7 @@ StEntry:pressed > StIcon,
 .sound-player-overlay {
   border-top: 1px rgba(0, 0, 0, 0.45);
   background-color: #111111;
-  padding: 10px 16px;
+  padding: 16px;
   spacing: 8px;
   color: rgba(255, 255, 255, 0.95);
 }
@@ -1013,6 +1013,11 @@ StEntry:pressed > StIcon,
   spacing: 6px;
   /* Cover width is hardcoded to 300px */
   max-width: 266px;
+}
+
+.sound-player-overlay StBoxLayout:last-child {
+  /* Controls box */
+  padding-top: 2px;
 }
 
 .sound-player-overlay StButton {

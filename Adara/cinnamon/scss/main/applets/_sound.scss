@@ -27,7 +27,7 @@
 	&-overlay {
 		border-top: 1px $border-primary;
 		background-color: $background-primary;
-		padding: $padding-m $padding-l;
+		padding: $padding-l;
 		spacing: $padding-s;
 		color: $text-primary;
 
@@ -35,6 +35,10 @@
 			spacing: $padding-xs;
 			/* Cover width is hardcoded to 300px */
 			max-width: 300px - 2 * $padding-l - 2;
+
+			&:last-child { /* Controls box */
+				padding-top: $padding-m - $padding-s; // Compensate spacing-s
+			}
 		}
 
 		StButton {
