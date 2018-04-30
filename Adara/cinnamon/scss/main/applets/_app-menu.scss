@@ -42,11 +42,11 @@ $menu-spacing: $padding-s;
 .menu-application-button,
 .menu-category-button {
 	padding: $padding-xs;
-	spacing: $padding-s;
+	spacing: $padding-xs;
 
 	&-selected, &-selected:highlighted {
 		padding: $padding-xs;
-		spacing: $padding-s;
+		spacing: $padding-xs;
 		color: $text-primary;
 		@include hover;
 
@@ -59,8 +59,23 @@ $menu-spacing: $padding-s;
 
 	&-greyed {
 		padding: $padding-xs;
-		spacing: $padding-s;
+		spacing: $padding-xs;
 		color: $text-disabled;
+	}
+
+	&-label {
+		padding: 0;
+
+		&:first-child:last-child { /* "All applications" button */
+			border: 0px rgba($accent-primary, .5);
+			border-left-width: 2px;
+			padding: 2px $padding-xs;
+
+			&:rtl {
+				border-left-width: 0px;
+				border-right-width: 2px;
+			}
+		}
 	}
 }
 

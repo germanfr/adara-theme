@@ -1301,14 +1301,14 @@ StEntry:pressed > StIcon,
 .menu-application-button,
 .menu-category-button {
   padding: 6px;
-  spacing: 8px;
+  spacing: 6px;
 }
 
 .menu-application-button-selected, .menu-application-button-selected:highlighted,
 .menu-category-button-selected,
 .menu-category-button-selected:highlighted {
   padding: 6px;
-  spacing: 8px;
+  spacing: 6px;
   color: rgba(255, 255, 255, 0.95);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
@@ -1329,8 +1329,27 @@ StEntry:pressed > StIcon,
 .menu-application-button-greyed,
 .menu-category-button-greyed {
   padding: 6px;
-  spacing: 8px;
+  spacing: 6px;
   color: rgba(255, 255, 255, 0.25);
+}
+
+.menu-application-button-label,
+.menu-category-button-label {
+  padding: 0;
+}
+
+.menu-application-button-label:first-child:last-child,
+.menu-category-button-label:first-child:last-child {
+  /* "All applications" button */
+  border: 0px rgba(153, 153, 153, 0.5);
+  border-left-width: 2px;
+  padding: 2px 6px;
+}
+
+.menu-application-button-label:first-child:last-child:rtl,
+.menu-category-button-label:first-child:last-child:rtl {
+  border-left-width: 0px;
+  border-right-width: 2px;
 }
 
 .menu-selected-app-box {
