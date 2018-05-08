@@ -385,11 +385,18 @@ StEntry:pressed > StIcon,
 
 .popup-separator-menu-item {
   -gradient-height: 1px;
-  -gradient-start: rgba(0, 0, 0, 0.2);
-  -gradient-end: rgba(0, 0, 0, 0.2);
+  -gradient-start: transparent;
+  -gradient-end: transparent;
   -margin-horizontal: 0;
   height: 1px;
   padding: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 6px 10px;
+}
+
+.popup-menu-item > .popup-separator-menu-item {
+  /* Cinnamon < 4.0 */
+  margin: 0;
 }
 
 /* Right click in scale (show all windows) */
