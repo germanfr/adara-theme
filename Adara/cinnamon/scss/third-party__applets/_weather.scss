@@ -9,8 +9,9 @@
 	}
 
 	.popup-separator-menu-item {
-		background-image: none;
+		background: transparent;
 		height: 0;
+		margin: 0;
 	}
 }
 
@@ -49,14 +50,16 @@
 .weather-current-databox {
 	padding: 0;
 
-	> * { spacing: $padding-xxs; }
-
 	&-captions {
+		spacing: $padding-xxs;
 		color: $text-secondary;
 		text-align: right;
 	}
 
-	&-values { color: $text-primary; }
+	&-values {
+		spacing: $padding-xxs;
+		color: $text-primary;
+	}
 }
 
 .weather-current-astronomy {

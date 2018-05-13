@@ -2120,8 +2120,9 @@ StEntry:pressed > StIcon,
 }
 
 .weather-menu .popup-separator-menu-item {
-  background-image: none;
+  background: transparent;
   height: 0;
+  margin: 0;
 }
 
 .current {
@@ -2164,16 +2165,14 @@ StEntry:pressed > StIcon,
   padding: 0;
 }
 
-.weather-current-databox > * {
-  spacing: 2px;
-}
-
 .weather-current-databox-captions {
+  spacing: 2px;
   color: rgba(0, 0, 0, 0.6);
   text-align: right;
 }
 
 .weather-current-databox-values {
+  spacing: 2px;
   color: rgba(0, 0, 0, 0.7);
 }
 
