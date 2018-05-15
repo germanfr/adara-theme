@@ -384,10 +384,6 @@ StEntry:pressed > StIcon,
 }
 
 .popup-separator-menu-item {
-  -gradient-height: 1px;
-  -gradient-start: transparent;
-  -gradient-end: transparent;
-  -margin-horizontal: 0;
   height: 1px;
   padding: 0;
   background-color: rgba(0, 0, 0, 0.2);
@@ -397,6 +393,10 @@ StEntry:pressed > StIcon,
 .popup-menu-item > .popup-separator-menu-item {
   /* Cinnamon < 4.0 */
   margin: 0;
+  -gradient-height: 1px;
+  -gradient-start: transparent;
+  -gradient-end: transparent;
+  -margin-horizontal: 0;
 }
 
 /* Right click in scale (show all windows) */
@@ -2836,21 +2836,8 @@ StEntry:pressed > StIcon,
   background-color: #f0f0f0;
 }
 
-.starkmenu-background .menu-favorites-box .popup-separator-menu-item {
-  padding: 6px 0;
-  margin: 0;
-}
-
 .starkmenu-background .right-buttons-box {
   padding: 0;
-}
-
-.starkmenu-background .right-buttons-box .popup-separator-menu-item {
-  padding: 6px 0;
-}
-
-.starkmenu-background .right-buttons-box .starkhover-box .popup-menu-item {
-  /*!*/
 }
 
 .starkmenu-search-box {

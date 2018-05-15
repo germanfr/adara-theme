@@ -41,20 +41,10 @@
 		.menu-context-menu {
 			@include background-element(secondary);
 		}
-
-		.popup-separator-menu-item {
-			padding: $padding-xs 0;
-			margin: 0;
-		}
 	}
 
 	.right-buttons-box {
 		padding: 0;
-		.popup-separator-menu-item {
-			padding: $padding-xs 0;
-		}
-
-		.starkhover-box .popup-menu-item {/*!*/}
 	}
 }
 
