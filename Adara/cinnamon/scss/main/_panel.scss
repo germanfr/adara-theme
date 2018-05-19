@@ -33,7 +33,13 @@ $panel-width: 43px;
 }
 
 .panelLeft, .panelCenter, .panelRight {
-	spacing: 0;
+	spacing: 1px;
+}
+
+/* Simulate panel spacing */
+.panelCenter {
+	padding: 0 1px;
+	&.vertical { padding: 1px 0; }
 }
 
 .panel-dummy {

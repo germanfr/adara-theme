@@ -3,8 +3,7 @@
  * ====================================== */
 
 .workspace-switcher {
-	padding: 0 $padding-xxs;
-	.vertical & { padding: $padding-xxs 0; }
+	padding: 0px;
 }
 
 .workspace-button {
@@ -40,9 +39,9 @@
  * ====================================== */
 
 .workspace-graph {
-	padding: 0 $applet-padding;
+	padding: 0 $padding-xxs;
 
-	.vertical & { padding: $applet-padding 0; }
+	.vertical & { padding: $padding-xxs 0; }
 
 	.workspace {
 		background-color: rgba(#fff, .1);

@@ -4,9 +4,7 @@
 
 .window-list-box {
 	spacing: $padding-xxs;
-	padding: 0 $padding-xxs;
-
-	&.vertical { padding: $padding-xxs 0; }
+	padding: 0;
 }
 
 .window-list-item-box {

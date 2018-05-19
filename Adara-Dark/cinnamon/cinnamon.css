@@ -553,7 +553,16 @@ StEntry:pressed > StIcon,
 }
 
 .panelLeft, .panelCenter, .panelRight {
-  spacing: 0;
+  spacing: 1px;
+}
+
+/* Simulate panel spacing */
+.panelCenter {
+  padding: 0 1px;
+}
+
+.panelCenter.vertical {
+  padding: 1px 0;
 }
 
 .panel-dummy {
@@ -837,11 +846,7 @@ StEntry:pressed > StIcon,
  * ====================================== */
 .window-list-box {
   spacing: 2px;
-  padding: 0 2px;
-}
-
-.window-list-box.vertical {
-  padding: 2px 0;
+  padding: 0;
 }
 
 .window-list-item-box {
@@ -1113,11 +1118,7 @@ StEntry:pressed > StIcon,
  * ! Number-mode Workspace Switcher applet
  * ====================================== */
 .workspace-switcher {
-  padding: 0 2px;
-}
-
-.vertical .workspace-switcher {
-  padding: 2px 0;
+  padding: 0px;
 }
 
 .workspace-button {
@@ -1170,11 +1171,11 @@ StEntry:pressed > StIcon,
  * ! Visual-mode Workspace Switcher applet
  * ====================================== */
 .workspace-graph {
-  padding: 0 6px;
+  padding: 0 2px;
 }
 
 .vertical .workspace-graph {
-  padding: 6px 0;
+  padding: 2px 0;
 }
 
 .workspace-graph .workspace {
