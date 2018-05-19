@@ -436,9 +436,9 @@ StEntry:pressed > StIcon,
   font-size: 100%;
   width: 43px;
   height: 33px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   border-bottom-width: 1px;
-  border-color: rgba(0, 0, 0, 0.45);
+  border-color: black;
   /* When panel settings is open */
   /* Panel edit mode */
 }
@@ -466,9 +466,9 @@ StEntry:pressed > StIcon,
   font-size: 100%;
   width: 43px;
   height: 33px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   border-top-width: 1px;
-  border-color: rgba(0, 0, 0, 0.45);
+  border-color: black;
   /* When panel settings is open */
   /* Panel edit mode */
 }
@@ -496,9 +496,9 @@ StEntry:pressed > StIcon,
   font-size: 100%;
   width: 43px;
   height: 33px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   border-right-width: 1px;
-  border-color: rgba(0, 0, 0, 0.45);
+  border-color: black;
   /* When panel settings is open */
   /* Panel edit mode */
 }
@@ -526,9 +526,9 @@ StEntry:pressed > StIcon,
   font-size: 100%;
   width: 43px;
   height: 33px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   border-left-width: 1px;
-  border-color: rgba(0, 0, 0, 0.45);
+  border-color: black;
   /* When panel settings is open */
   /* Panel edit mode */
 }
