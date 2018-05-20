@@ -438,7 +438,7 @@ StEntry:pressed > StIcon,
   height: 33px;
   background-color: rgba(0, 0, 0, 0.85);
   border-bottom-width: 1px;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0.25);
   /* When panel settings is open */
   /* Panel edit mode */
 }
@@ -468,7 +468,7 @@ StEntry:pressed > StIcon,
   height: 33px;
   background-color: rgba(0, 0, 0, 0.85);
   border-top-width: 1px;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0.25);
   /* When panel settings is open */
   /* Panel edit mode */
 }
@@ -498,7 +498,7 @@ StEntry:pressed > StIcon,
   height: 33px;
   background-color: rgba(0, 0, 0, 0.85);
   border-right-width: 1px;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0.25);
   /* When panel settings is open */
   /* Panel edit mode */
 }
@@ -528,7 +528,7 @@ StEntry:pressed > StIcon,
   height: 33px;
   background-color: rgba(0, 0, 0, 0.85);
   border-left-width: 1px;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0.25);
   /* When panel settings is open */
   /* Panel edit mode */
 }
