@@ -344,9 +344,9 @@ StEntry:pressed > StIcon,
 }
 
 .popup-menu-arrow {
-  icon-size: 1em;
-  width: 1em;
-  height: 1em;
+  icon-size: 1.05em;
+  width: 1.05em;
+  height: 1.05em;
   color: rgba(255, 255, 255, 0.95);
 }
 
