@@ -1312,7 +1312,8 @@ StEntry:pressed > StIcon,
   spacing: 6px;
 }
 
-.menu-application-button-selected, .menu-application-button-selected:highlighted,
+.menu-application-button:hover, .menu-application-button-selected, .menu-application-button-selected:highlighted,
+.menu-category-button:hover,
 .menu-category-button-selected,
 .menu-category-button-selected:highlighted {
   padding: 6px;
@@ -1322,13 +1323,15 @@ StEntry:pressed > StIcon,
   border-radius: 2px;
 }
 
-.menu-application-button-selected StIcon, .menu-application-button-selected:highlighted StIcon,
+.menu-application-button:hover StIcon, .menu-application-button-selected StIcon, .menu-application-button-selected:highlighted StIcon,
+.menu-category-button:hover StIcon,
 .menu-category-button-selected StIcon,
 .menu-category-button-selected:highlighted StIcon {
   color: rgba(255, 255, 255, 0.95);
 }
 
-.menu-application-button-selected:highlighted, .menu-application-button:highlighted,
+.menu-application-button:hover:highlighted, .menu-application-button-selected:highlighted, .menu-application-button:highlighted,
+.menu-category-button:hover:highlighted,
 .menu-category-button-selected:highlighted,
 .menu-category-button:highlighted {
   font-weight: bold;
