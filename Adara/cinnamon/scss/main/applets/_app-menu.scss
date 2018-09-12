@@ -29,14 +29,14 @@ $menu-spacing: $padding-s;
 
 .menu-applications-outer-box {
 	spacing: $menu-spacing;
+}
 
-	.menu-applications-inner-box {
-		margin: 0 $menu-spacing;
-	}
+.menu-applications-inner-box {
+	margin: 0 $menu-spacing;
+}
 
-	.menu-applications-scrollbox {
-		padding: 0;
-	}
+.menu-applications-scrollbox {
+	padding: 0;
 }
 
 .menu-application-button,

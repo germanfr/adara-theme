@@ -1298,11 +1298,11 @@ StEntry:pressed > StIcon,
   spacing: 8px;
 }
 
-.menu-applications-outer-box .menu-applications-inner-box {
+.menu-applications-inner-box {
   margin: 0 8px;
 }
 
-.menu-applications-outer-box .menu-applications-scrollbox {
+.menu-applications-scrollbox {
   padding: 0;
 }
 
