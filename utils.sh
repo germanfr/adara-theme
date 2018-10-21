@@ -21,6 +21,15 @@ sass_output='cinnamon.css'
 sass_style='expanded'
 sass_optfile='scss/base/_options.scss'
 
+if type sassc &> /dev/null; then
+    sass_command=sassc
+elif type sass &> /dev/null; then
+    sass_command=sass
+else
+    echo 'sassc not found'
+    exit 1
+fi
+
 assets_dirs=(
     'img'
 )
@@ -50,7 +59,7 @@ extra_files=(
 #  Operations
 # ======================================
 compile_sass () {
-    sassc -t "$sass_style" "$sass_input" > "$sass_output"
+    $sass_command -t "$sass_style" "$sass_input" > "$sass_output"
 }
 
 restart_theme () {
@@ -157,7 +166,14 @@ watch_files () {
     compile_theme
     symlink_theme
     cd "$theme/cinnamon/"
-    echo 'Started watching files (Ctrl+C to exit)'
+
+    if type inotifywait &> /dev/null; then
+        echo 'Started watching files (Ctrl+C to exit)'
+    else
+        echo 'inotifywait (inotify-tools) not found.'
+        exit 1
+    fi
+
     while true; do
         compile_sass
         restart_theme
