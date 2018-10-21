@@ -66,19 +66,39 @@
 
 /* The background for the scale view */
 .workspace-overview-background-shade {
-	@extend .expo-background;
+	background-color: rgba(#000, .65);
+}
+
+.window-border {
+	$border-color: rgba(#fff, .5);
+	border: (5px - 1px) $border-color;
+	box-shadow: 0 0 0 1px $border-color inset;
+	border-radius: 2px;
+	background-color: rgba(#fff, .05);
 }
 
 .window-caption {
-	-cinnamon-caption-spacing: 12px;
+	-cinnamon-caption-spacing: -(16px / 2 + $padding-s);
 	color: $text-primary-invert;
 	font-size: $font-size-base;
 	font-weight: normal;
-	max-width: 16em;
+	max-width: 24em;
+	spacing: $padding-s;
+	padding: $padding-s;
+	@include background-element;
 }
 
 .window-close {
 	@extend .workspace-close-button;
+	-cinnamon-close-overlap: 11px;
 }
 
-.window-iconbox {/* ! */}
+.window-iconbox { /* Cinnamon < 4.0 */
+	/* Compensate negative caption spacing overlap */
+	padding-right: (16px / 2 + $padding-s) + $padding-m;
+}
+
+.overview-empty-placeholder {
+	color: $text-primary-invert;
+	font-size: $font-size-xxxl;
+}
