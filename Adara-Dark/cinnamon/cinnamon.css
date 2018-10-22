@@ -35,6 +35,12 @@ stage {
   text-decoration: underline;
 }
 
+StIcon {
+  warning-color: #ebbc00;
+  error-color: #ff2525;
+  success-color: #1481b8;
+}
+
 /* ======================================
  * ! Tooltips
  * ====================================== */
@@ -1602,11 +1608,11 @@ StEntry:pressed > StIcon,
 .run-dialog-error-box {
   padding: 0;
   spacing: 8px;
-  color: #ff1414;
+  color: #ff2525;
 }
 
 .run-dialog-error-icon {
-  color: #ff1414;
+  color: #ff2525;
 }
 
 .run-dialog-completion-box {
