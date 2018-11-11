@@ -57,12 +57,12 @@ $applet-padding: $padding-xs;
 	}
 
 	&:checked {
-		background-color: rgba($text-primary-invert, .1);
+		background-color: rgba($text-primary-invert, .15);
 	}
 
 	&:highlight {
 		border-color: $accent-hlight;
-		background-color: rgba($accent-hlight, .1);
+		background-color: rgba($accent-hlight, .15);
 	}
 
 }

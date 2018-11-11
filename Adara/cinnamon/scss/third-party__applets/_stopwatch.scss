@@ -31,11 +31,11 @@
 }
 
 .stopwatch-paused {
-	background-color: rgba($accent-hlight, .1);
+	background-color: rgba($accent-hlight, .15);
 	border-color: $accent-hlight;
 }
 
 .stopwatch-running {
-	background-color: rgba($accent-success, .1);
+	background-color: rgba($accent-success, .15);
 	border-color: $accent-success;
 }

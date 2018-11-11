@@ -28,7 +28,7 @@
 	}
 
 	&:active, &:checked, &:focus  {
-		background-color: rgba($text-primary-invert, .1);
+		background-color: rgba($text-primary-invert, .15);
 	}
 
 	.progress {
@@ -38,7 +38,7 @@
 
 .window-list-item-demands-attention,
 .window-list-item-demands-attention:hover {
-	background-color: rgba($accent-hlight, .1);
+	background-color: rgba($accent-hlight, .15);
 	border-color: $accent-hlight;
 }
 

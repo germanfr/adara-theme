@@ -763,12 +763,12 @@ StEntry:pressed > StIcon,
 }
 
 .applet-box:checked {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .applet-box:highlight {
   border-color: #ffcc00;
-  background-color: rgba(255, 204, 0, 0.1);
+  background-color: rgba(255, 204, 0, 0.15);
 }
 
 /* ======================================
@@ -921,7 +921,7 @@ StEntry:pressed > StIcon,
 }
 
 .window-list-item-box:active, .window-list-item-box:checked, .window-list-item-box:focus {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .window-list-item-box .progress {
@@ -930,7 +930,7 @@ StEntry:pressed > StIcon,
 
 .window-list-item-demands-attention,
 .window-list-item-demands-attention:hover {
-  background-color: rgba(255, 204, 0, 0.1);
+  background-color: rgba(255, 204, 0, 0.15);
   border-color: #ffcc00;
 }
 
@@ -1199,7 +1199,7 @@ StEntry:pressed > StIcon,
 }
 
 .workspace-button:outlined {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* ======================================
@@ -2688,12 +2688,12 @@ StEntry:pressed > StIcon,
 }
 
 .stopwatch-paused {
-  background-color: rgba(255, 204, 0, 0.1);
+  background-color: rgba(255, 204, 0, 0.15);
   border-color: #ffcc00;
 }
 
 .stopwatch-running {
-  background-color: rgba(51, 204, 51, 0.1);
+  background-color: rgba(51, 204, 51, 0.15);
   border-color: #33cc33;
 }
 
