@@ -57,3 +57,86 @@
 	padding: $padding-s;
 	spacing: $padding-s;
 }
+
+/* ======================================
+ * ! Grouped window list
+ * ====================================== */
+
+.grouped-window-list {
+	&-thumbnail-menu {
+		spacing: $padding-xxs;
+
+		.item-box {
+			padding: $padding-xxs;
+			spacing: $padding-xs;
+
+			/* Currently focused window */
+			&:outlined {
+				border-color: $background-hover;
+				border-radius: 2px;
+			}
+
+			&:hover {
+				border-color: transparent;
+				@include hover();
+			}
+		}
+
+		.window-close {
+			background-image: url("img/controls/close-simple.svg");
+
+			&:hover { background-image: url("img/controls/close-simple-hover.svg"); }
+		}
+	}
+
+	&-thumbnail-label {
+		/* Compensate width (fixed) of the window close button to the right */
+		margin-left: 22px;
+	}
+
+	&-item-box {
+		color: $text-primary-invert;
+		spacing: $applet-padding * 2 / 3;
+		border-color: transparent;
+		padding: 1px $applet-padding;
+
+		@each $pos in top, bottom, left, right {
+			&.#{$pos} {
+				border-#{$pos}-width: 1px;
+				padding-#{$pos}: 0px;
+			}
+		}
+
+		/*
+		 * :hover - mouse is over
+		 * :active - application is running
+		 * :closed - application is not running
+		 * :focus - current application
+		 * :checked - when the context menu is open
+		 */
+		&:hover, &:active, &:checked, &:focus {
+			border-color: $text-primary-invert;
+			color: $text-primary-invert;
+		}
+
+		&:focus, &:active:hover, &:checked  {
+			background-color: rgba($text-primary-invert, .15);
+		}
+
+		&:closed {/* ! */}
+	}
+
+	&-badge {
+		background: $text-primary-invert;
+		color: #111;
+		box-shadow: 0 0 2px #000;
+		border-radius: 2px;
+		font-weight: bold;
+		margin-top: 2px;
+		padding-top: 1px; /* Adjust vertically uncentered text */
+	}
+
+	&-number-label {
+		background: transparent; /* Add this to cancel default styles */
+	}
+}
