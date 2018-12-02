@@ -1009,6 +1009,10 @@ StEntry:pressed > StIcon,
 		 */
 }
 
+.vertical .grouped-window-list-item-box {
+  padding: 6px 1px;
+}
+
 .grouped-window-list-item-box.top {
   border-top-width: 1px;
   padding-top: 0px;

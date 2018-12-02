@@ -104,6 +104,8 @@
 		border-color: transparent;
 		padding: 1px $applet-padding;
 
+		.vertical & { padding: $applet-padding 1px; }
+
 		@each $pos in top, bottom, left, right {
 			&.#{$pos} {
 				border-#{$pos}-width: 1px;
