@@ -61,6 +61,10 @@ $menu-spacing: $padding-s;
 		padding: $padding-xs;
 		spacing: $padding-xs;
 		color: $text-disabled;
+
+		StIcon {
+			opacity: light-dark(.3, .2);
+		}
 	}
 
 	&-label {

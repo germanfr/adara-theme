@@ -1487,6 +1487,11 @@ StEntry:pressed > StIcon,
   color: rgba(255, 255, 255, 0.25);
 }
 
+.menu-application-button-greyed StIcon,
+.menu-category-button-greyed StIcon {
+  opacity: 0.2;
+}
+
 .menu-application-button-label,
 .menu-category-button-label {
   padding: 0;
