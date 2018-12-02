@@ -94,6 +94,10 @@
 		margin-left: 22px;
 	}
 
+	&-button-label {
+		padding: 0; // Reset this
+	}
+
 	&-item-box {
 		color: $text-primary-invert;
 		spacing: $applet-padding * 2 / 3;

@@ -991,6 +991,10 @@ StEntry:pressed > StIcon,
   margin-left: 22px;
 }
 
+.grouped-window-list-button-label {
+  padding: 0;
+}
+
 .grouped-window-list-item-box {
   color: rgba(255, 255, 255, 0.85);
   spacing: 4px;
