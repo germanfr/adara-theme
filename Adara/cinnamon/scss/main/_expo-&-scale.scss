@@ -41,7 +41,7 @@
 	background-image: url("img/expo_scale/plus.svg");
 	background-color: rgba(#fff, .1);
 	border: 1px #000;
-	border-radius: 2px;
+	border-radius: $element-radius;
 	border-right: 0;
 	height: 256px;
 	width: 48px;
@@ -55,7 +55,7 @@
 	background-image: url("img/expo_scale/trash.svg");
 	background-color: rgba(#fff, .1);
 	border: 1px #000;
-	border-radius: 2px;
+	border-radius: $element-radius;
 	border-bottom: 0;
 	height: 64px;
 	width: 512px;
@@ -73,7 +73,7 @@
 	$border-color: rgba(#fff, .5);
 	border: (5px - 1px) $border-color;
 	box-shadow: 0 0 0 1px $border-color inset;
-	border-radius: 2px;
+	border-radius: $element-radius;
 	background-color: rgba(#fff, .05);
 }
 

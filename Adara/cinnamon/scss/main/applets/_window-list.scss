@@ -73,7 +73,7 @@
 			/* Currently focused window */
 			&:outlined {
 				border-color: $background-hover;
-				border-radius: 2px;
+				border-radius: $element-radius;
 			}
 
 			&:hover {
@@ -136,7 +136,7 @@
 		background: $text-primary-invert;
 		color: #111;
 		box-shadow: 0 0 2px #000;
-		border-radius: 2px;
+		border-radius: $element-radius;
 		font-weight: bold;
 		margin-top: 2px;
 		padding-top: 1px; /* Adjust vertically uncentered text */

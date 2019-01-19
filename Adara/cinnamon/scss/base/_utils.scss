@@ -5,7 +5,7 @@
 }
 
 @mixin background-element($level: primary) {
-	border-radius: 2px;
+	border-radius: $element-radius;
 	color: $text-primary;
 	@if $level == 'secondary'{
 		border: 1px solid $border-secondary;
@@ -23,7 +23,7 @@
 @mixin hover($radius:true) {
 	background-color: $background-hover;
 	@if $radius {
-		border-radius: 2px;
+		border-radius: $element-radius;
 	}
 }
 

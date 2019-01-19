@@ -30,7 +30,7 @@
 	spacing: $padding-s;
 
 	&:active {
-		@include hover($radius:false);
+		@include hover(false);
 	}
 
 	&:insensitive {
@@ -79,7 +79,7 @@
 	@include background-element;
 
 	.popup-menu-item:active {
-		@include hover($radius:false);
+		@include hover(false);
 	}
 }
 

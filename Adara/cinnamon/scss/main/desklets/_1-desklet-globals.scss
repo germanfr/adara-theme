@@ -11,12 +11,12 @@
 	}
 
 	&-with-borders-and-header {
-		border-radius: 0 0 2px 2px;
+		border-radius: 0 0 $element-radius $element-radius;
 		border-top: none;
 	}
 
 	&-header {
-		border-radius: 2px 2px 0 0;
+		border-radius: $element-radius $element-radius 0 0;
 		border-bottom: none;
 		padding: $padding-s;
 
