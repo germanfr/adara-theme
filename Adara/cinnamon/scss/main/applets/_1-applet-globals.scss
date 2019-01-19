@@ -34,7 +34,7 @@ $applet-padding: $padding-xs;
 }
 
 .applet-box {
-	color: $text-primary-invert;
+	color: blend($text-primary-invert, $background-panel);
 	spacing: round($applet-padding * 2 / 3);
 	border-color: transparent;
 	padding: 0 $applet-padding;

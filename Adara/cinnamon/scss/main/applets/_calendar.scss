@@ -76,7 +76,7 @@
 
 .calendar-today {
 	background-color: rgba($accent-info, .25);
-	border-color: resolve-transparency($border-primary, $background-primary);
+	border-color: blend($border-primary, $background-primary);
 	font-weight: bold;
 }
 

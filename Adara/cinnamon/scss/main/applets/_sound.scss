@@ -51,7 +51,7 @@
 		height: .45em;
 		// Resolve transparency needed because the background
 		// is painted over the active part.
-		-slider-background-color: resolve-transparency($border-primary, $background-primary);
+		-slider-background-color: blend($border-primary, $background-primary);
 		-slider-active-background-color: $accent-primary;
 		-slider-handle-radius: 0;
 		border-image: none;

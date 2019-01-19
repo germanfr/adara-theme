@@ -47,9 +47,10 @@
 	}
 }
 
-@function resolve-transparency($color, $background) {
+@function blend($color, $background) {
 	$alpha: alpha($color) * 100%;
-	@return mix(opacify($color, 1), $background, $alpha);
+	$col: mix(rgba($color, 1), rgba($background, 1), $alpha);
+	@return rgba($col, alpha($color) + alpha($background));
 }
 
 @mixin cinnamon-gradient($direction, $start, $end: transparent) {
