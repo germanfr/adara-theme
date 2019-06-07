@@ -9,16 +9,17 @@
 .stopwatch-running-day-exceeded,
 .stopwatch-paused-day-exceeded {
 	background-color: transparent;
-	border-color: $text-primary-invert;
+	border: 0px $text-primary-invert;
 	padding: 0 $applet-padding;
 	border-radius: 0;
+	margin: 0;
+	font-size: 100%;
 }
 
 .stopwatch-running,
 .stopwatch-paused,
 .stopwatch-ready:hover,
 .stopwatch-paused:hover {
-
 	.panel-bottom & {
 		border-bottom: 1px;
 		padding-top: 1px;
