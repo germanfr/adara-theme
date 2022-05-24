@@ -149,9 +149,7 @@ StEntry StIcon,
   icon-size: 16px;
 }
 
-StEntry:focus > StIcon,
-StEntry:active > StIcon,
-StEntry:pressed > StIcon,
+StEntry:focus > StIcon, StEntry:active > StIcon, StEntry:pressed > StIcon,
 .menu StEntry:focus > StIcon,
 .menu StEntry:active > StIcon,
 .menu StEntry:pressed > StIcon,
@@ -858,7 +856,6 @@ StEntry:pressed > StIcon,
 
 .calendar-nonwork-day {
   color: rgba(255, 255, 255, 0.75);
-  background-color: #090909;
   border-color: rgba(0, 0, 0, 0.35);
 }
 
@@ -874,6 +871,167 @@ StEntry:pressed > StIcon,
 
 .calendar-week-number {
   color: rgba(255, 255, 255, 0.75);
+}
+
+.calendar-today-day-label {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  font-size: 150%;
+  text-align: center;
+}
+
+.calendar-today-date-label {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+  font-size: 120%;
+  text-align: center;
+}
+
+.calendar-not-today {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.calendar-not-today:selected {
+  font-weight: bold;
+  background-color: #090909;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.calendar-not-today:selected:hover {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Event Box */
+.calendar-events-main-box {
+  height: 300px;
+  margin-right: .5em;
+  padding: .5em;
+  min-width: 350px;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  background-color: #090909;
+}
+
+.calendar-events-no-events-button {
+  margin: 6px 0 6px 0;
+  padding: 6px;
+}
+
+.calendar-events-no-events-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-events-no-events-button:hover .calendar-events-no-events-icon,
+.calendar-events-no-events-button:hover .calendar-events-no-events-label {
+  color: #999;
+}
+
+.calendar-events-no-events-icon,
+.calendar-events-no-events-label {
+  font-weight: bold;
+  color: #999;
+  text-align: center;
+}
+
+.calendar-events-date-label {
+  padding: .1em .1em .5em .1em;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-events-event-container {
+  padding: 0;
+}
+
+.calendar-event-button {
+  border: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.calendar-event-button .calendar-event-time-past {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: .2em;
+}
+
+.calendar-event-button .calendar-event-time-present {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: .2em;
+}
+
+.calendar-event-button .calendar-event-time-present:all-day {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-event-button .calendar-event-time-future {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: .2em;
+}
+
+.calendar-event-button .calendar-event-summary {
+  color: rgba(255, 255, 255, 0.95);
+  text-align: left;
+  width: 200px;
+}
+
+.calendar-event-button .calendar-event-countdown {
+  text-align: right;
+  margin-bottom: .6em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.calendar-event-button .calendar-event-countdown:soon {
+  font-weight: bold;
+}
+
+.calendar-event-button .calendar-event-countdown:imminent {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.calendar-event-button .calendar-event-countdown:current {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-event-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.calendar-event-button:hover .calendar-event-time-past,
+.calendar-event-button:hover .calendar-event-time-present,
+.calendar-event-button:hover .calendar-event-time-future,
+.calendar-event-button:hover .calendar-event-summary {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.calendar-event-button:hover .calendar-event-countdown {
+  text-align: right;
+  margin-bottom: .6em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.calendar-event-button:hover .calendar-event-countdown:soon {
+  font-weight: bold;
+}
+
+.calendar-event-button:hover .calendar-event-countdown:imminent {
+  font-weight: bold;
+}
+
+.calendar-event-button:hover .calendar-event-countdown:current {
+  font-weight: bold;
+}
+
+.calendar-event-color-strip {
+  width: 2px;
 }
 
 /* ======================================
@@ -2412,9 +2570,7 @@ StEntry:pressed > StIcon,
   icon-size: 16px;
 }
 
-.menu .slingshot .entry:focus > StIcon,
-.menu .slingshot .entry:active > StIcon,
-.menu .slingshot .entry:pressed > StIcon {
+.menu .slingshot .entry:focus > StIcon, .menu .slingshot .entry:active > StIcon, .menu .slingshot .entry:pressed > StIcon {
   color: rgba(255, 255, 255, 0.95);
 }
 
@@ -2786,18 +2942,12 @@ StEntry:pressed > StIcon,
   font-size: 100%;
 }
 
-.panel-bottom .stopwatch-running, .panel-bottom
-.stopwatch-paused, .panel-bottom
-.stopwatch-ready:hover, .panel-bottom
-.stopwatch-paused:hover {
+.panel-bottom .stopwatch-running, .panel-bottom .stopwatch-paused, .panel-bottom .stopwatch-ready:hover, .panel-bottom .stopwatch-paused:hover {
   border-bottom: 1px;
   padding-top: 1px;
 }
 
-.panel-top .stopwatch-running, .panel-top
-.stopwatch-paused, .panel-top
-.stopwatch-ready:hover, .panel-top
-.stopwatch-paused:hover {
+.panel-top .stopwatch-running, .panel-top .stopwatch-paused, .panel-top .stopwatch-ready:hover, .panel-top .stopwatch-paused:hover {
   border-top: 1px;
   padding-bottom: 1px;
 }

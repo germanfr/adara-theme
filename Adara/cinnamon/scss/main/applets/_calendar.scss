@@ -70,7 +70,6 @@
 }
 .calendar-nonwork-day {
 	color: $text-secondary;
-	background-color: $background-secondary;
 	border-color: $border-secondary;
 }
 
@@ -86,4 +85,165 @@
 
 .calendar-week-number {
 	color: $text-secondary;
+}
+
+.calendar-today-day-label {
+    color: $text-primary;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+.calendar-today-date-label {
+    color: $text-secondary;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+
+.calendar-not-today {
+  color: $text-primary; 
+}
+  
+.calendar-not-today:selected {
+    font-weight: bold;
+    background-color: $background-secondary;
+    color: $text-primary; 
+}
+    
+.calendar-not-today:selected:hover {
+      font-weight: bold;
+      color: $text-primary;
+      background-color: $background-hover; 
+}
+
+/* Event Box */
+.calendar-events-main-box {
+  height: 300px;
+  margin-right: .5em;
+  padding: .5em;
+  min-width: 350px;
+  border: 1px solid $border-primary;
+  background-color: $background-secondary; 
+}
+
+.calendar-events-no-events-button {
+  margin: 6px 0 6px 0;
+  padding: 6px; 
+}
+  
+.calendar-events-no-events-button:hover {
+    background-color: $background-hover; 
+}
+    
+.calendar-events-no-events-button:hover .calendar-events-no-events-icon,
+.calendar-events-no-events-button:hover .calendar-events-no-events-label {
+      color: $accent-primary; 
+}
+
+.calendar-events-no-events-icon,
+.calendar-events-no-events-label {
+  font-weight: bold;
+  color: $accent-primary;
+  text-align: center; 
+}
+
+.calendar-events-date-label {
+  padding: .1em .1em .5em .1em;
+  color: $text-primary;
+  font-weight: bold;
+  text-align: center; 
+}
+
+.calendar-events-event-container {
+  padding: 0; 
+}
+
+.calendar-event-button {
+  border: 1px solid $border-primary; 
+}
+
+.calendar-event-button .calendar-event-time-past {
+    color: $text-primary;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: .2em; 
+}
+  
+.calendar-event-button .calendar-event-time-present {
+    color: $text-primary;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: .2em; 
+}
+    
+.calendar-event-button .calendar-event-time-present:all-day {
+      color: $background-hover; 
+}
+  
+.calendar-event-button .calendar-event-time-future {
+    color: $text-primary;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: .2em; 
+}
+  
+.calendar-event-button .calendar-event-summary {
+    color: $text-primary;
+    text-align: left;
+    width: 200px; 
+}
+  
+.calendar-event-button .calendar-event-countdown {
+    text-align: right;
+    margin-bottom: .6em;
+    color: $text-primary; 
+}
+    
+.calendar-event-button .calendar-event-countdown:soon {
+      font-weight: bold; 
+}
+    
+.calendar-event-button .calendar-event-countdown:imminent {
+      font-weight: bold;
+      color: $text-primary; 
+}
+    
+.calendar-event-button .calendar-event-countdown:current {
+      font-weight: bold;
+      color: $background-hover; 
+}
+  
+.calendar-event-button:hover {
+    background-color: $background-hover;
+    border: 1px solid $border-secondary; 
+}
+
+.calendar-event-button:hover .calendar-event-time-past,
+.calendar-event-button:hover .calendar-event-time-present,
+.calendar-event-button:hover .calendar-event-time-future,
+.calendar-event-button:hover .calendar-event-summary {
+      color: $text-primary; 
+}
+    
+.calendar-event-button:hover .calendar-event-countdown {
+      text-align: right;
+      margin-bottom: .6em;
+      color: $text-primary; 
+}
+      
+.calendar-event-button:hover .calendar-event-countdown:soon {
+        font-weight: bold; 
+}
+      
+.calendar-event-button:hover .calendar-event-countdown:imminent {
+        font-weight: bold; 
+}
+      
+.calendar-event-button:hover .calendar-event-countdown:current {
+        font-weight: bold; 
+}
+
+.calendar-event-color-strip {
+  width: 2px; 
 }
