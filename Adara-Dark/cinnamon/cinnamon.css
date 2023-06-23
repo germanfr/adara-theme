@@ -943,7 +943,7 @@ StEntry:pressed > StIcon,
  * Hopefully a 'switcher-list' doesn't appear
  * anywhere else as the direct child of '#uiGroup'.
  */
-#uiGroup > .switcher-list,
+.switcher-list,
 .window-list-preview {
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.95);
@@ -2026,12 +2026,12 @@ StEntry:pressed > StIcon,
  *
  * See also window-list module for a similar selector
  */
-#uiGroup > #altTabPopup {
+#altTabPopup {
   padding: 0;
   spacing: 6px;
 }
 
-#uiGroup > #altTabPopup .switcher-list {
+#altTabPopup .switcher-list {
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.45);
@@ -2042,28 +2042,28 @@ StEntry:pressed > StIcon,
   padding: 3px;
 }
 
-#uiGroup > #altTabPopup .switcher-list .item-box {
+#altTabPopup .switcher-list .item-box {
   padding: 6px;
 }
 
-#uiGroup > #altTabPopup .switcher-list .item-box:selected {
+#altTabPopup .switcher-list .item-box:selected {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.95);
   /* Popup thumbnail */
 }
 
-#uiGroup > #altTabPopup .switcher-list .item-box:selected:last-child {
+#altTabPopup .switcher-list .item-box:selected:last-child {
   padding: 6px;
   background: none;
   color: rgba(255, 255, 255, 0.95);
 }
 
-#uiGroup > #altTabPopup .switcher-arrow {
+#altTabPopup .switcher-arrow {
   color: transparent;
 }
 
-#uiGroup > #altTabPopup .thumbnail {
+#altTabPopup .thumbnail {
   width: 256px;
 }
 
@@ -2071,7 +2071,7 @@ StEntry:pressed > StIcon,
  * This styles the window name box when alt-tab is
  * in 'coverflow' or 'timeline' modes
  */
-#uiGroup > StWidget > .switcher-list {
+StWidget > .switcher-list {
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.45);
